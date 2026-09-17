@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Googol Zoom · Math Lab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Math Lab">
+<meta name="theme-color" content="#8fd3ff">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+:root{
+  --ink:#23314f; --muted:#5d6883; --sun:#ffcf3f; --pop:#ff5d5d;
+  --red:#d9281c; --blue:#1f6fd1; --green:#1f9d45; --yellow:#ffc919; --orange:#ff8a1f;
+  --purple:#8a4fd8; --azure:#23a9d0; --lime:#9bd12a; --pink:#ff5f9e; --grey:#8d96a8;
+  --card:#fff; --line:#dfe6f3;
+}
+*{ margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html,body{ min-height:100%; }
+body{
+  font-family:ui-rounded,"SF Pro Rounded",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(165deg,#8fd3ff 0%,#c9f0ff 38%,#fff3c9 100%);
+  background-attachment:fixed;
+  -webkit-text-size-adjust:100%;
+  -webkit-user-select:none; user-select:none;
+  touch-action:manipulation;
+}
+button{ font:inherit; color:inherit; cursor:pointer; touch-action:manipulation; }
+sup{ font-size:.58em; vertical-align:super; line-height:0; }
+
+/* ---------- top bar ---------- */
+.top{
+  position:sticky; top:0; z-index:20;
+  display:flex; align-items:center; gap:8px;
+  padding:calc(env(safe-area-inset-top) + 8px) 12px 8px;
+  background:rgba(255,255,255,.88); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  box-shadow:0 3px 14px rgba(40,60,110,.14);
+}
+.home{
+  flex:none; display:inline-flex; align-items:center; gap:6px;
+  background:var(--ink); color:#fff; text-decoration:none; font-weight:900; font-size:15px;
+  padding:9px 14px; border-radius:999px; box-shadow:0 4px 0 rgba(0,0,0,.18);
+}
+.home:active{ transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.18); }
+.gtitle{ flex:1; min-width:0; text-align:center; font-weight:900; font-size:clamp(16px,4.4vw,22px);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.pill{ flex:none; font-weight:900; font-size:15px; background:#fff4cc; border:2px solid #ffd966;
+  padding:6px 10px; border-radius:999px; }
+.iconbtn{ flex:none; width:40px; height:40px; border-radius:50%; border:2px solid var(--line);
+  background:#fff; font-size:19px; display:grid; place-items:center; }
+.iconbtn.off{ opacity:.6; }
+.vbtn{ flex:none; height:40px; border-radius:999px; border:2px solid #b8e0c4; background:#e6f7ec; color:#12743a;
+  font-weight:900; font-size:14px; padding:0 11px; white-space:nowrap; }
+.vbtn.off{ border-color:#e3c3c3; background:#fdeeee; color:#a03a3a; }
+.vbtn.off span{ text-decoration:line-through; text-decoration-thickness:2px; }
+.toast{ position:fixed; left:50%; top:calc(env(safe-area-inset-top) + 66px); transform:translateX(-50%); z-index:90; pointer-events:none;
+  background:#23314f; color:#fff; font-weight:800; font-size:15px; padding:10px 18px; border-radius:999px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25); max-width:calc(100vw - 32px); text-align:center; transition:opacity .4s; animation:fade .2s; }
+.toast.out{ opacity:0; }
+@media (max-width:420px){ .home span, .gtitle .gi{ display:none; } .top .pill{ display:none; } .iconbtn{ width:36px; height:36px; font-size:17px; } .vbtn{ height:36px; font-size:13px; padding:0 9px; } }
+
+.screen{ max-width:1040px; margin:0 auto; padding:14px 14px calc(env(safe-area-inset-bottom) + 30px); }
+
+/* ---------- lego brick ---------- */
+.brick{
+  --c:var(--red);
+  position:relative; display:flex; align-items:center; justify-content:center;
+  background:var(--c); color:#fff; border-radius:7px; font-weight:900;
+  box-shadow:inset 0 -5px 0 rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.35), 0 3px 7px rgba(20,30,60,.18);
+  text-shadow:0 2px 0 rgba(0,0,0,.22);
+  font-variant-numeric:tabular-nums;
+}
+.brick::before{
+  content:""; position:absolute; left:8%; right:8%; top:-6px; height:7px;
+  background:radial-gradient(circle at 50% 75%, var(--c) 0 4.3px, transparent 4.8px) center top/17px 7px repeat-x;
+  filter:brightness(1.1);
+}
+.brick.lt{ color:var(--ink); text-shadow:none; }
+.c-red{--c:var(--red)} .c-blue{--c:var(--blue)} .c-green{--c:var(--green)} .c-yellow{--c:var(--yellow)}
+.c-orange{--c:var(--orange)} .c-purple{--c:var(--purple)} .c-azure{--c:var(--azure)} .c-lime{--c:var(--lime)}
+.c-pink{--c:var(--pink)} .c-grey{--c:var(--grey)}
+
+/* ---------- blanks (answer slots) ---------- */
+.blank{
+  cursor:pointer; background:#fff; color:var(--ink); text-shadow:none;
+  outline:3px dashed #a9b8d3; outline-offset:-3px;
+}
+.brick.blank{ --c:#eef2f9; box-shadow:0 3px 7px rgba(20,30,60,.12); }
+.blank:empty::after{ content:"?"; color:#b3bfd6; }
+.blank.sel{ outline:4px solid #ffb020; outline-offset:-4px; background:#fffbea; animation:glow 1.1s ease-in-out infinite; }
+.blank.bad{ outline:4px solid #e5484d; outline-offset:-4px; color:#e5484d; animation:shake .36s; }
+.blank.ok{ outline:none; background:var(--green); color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.2); animation:pop .35s; }
+.brick.blank.ok{ --c:var(--green); }
+.blank.given{ outline:none; background:var(--orange); color:#fff; }
+.brick.blank.given{ --c:var(--orange); }
+.blank.hl, .hl{ box-shadow:0 0 0 4px #ffb020, 0 3px 7px rgba(20,30,60,.18) !important; }
+@keyframes glow{ 50%{ box-shadow:0 0 0 6px rgba(255,176,32,.35); } }
+@keyframes shake{ 0%,100%{transform:translateX(0)} 20%{transform:translateX(-7px)} 40%{transform:translateX(7px)} 60%{transform:translateX(-5px)} 80%{transform:translateX(5px)} }
+@keyframes pop{ 0%{transform:scale(1)} 45%{transform:scale(1.18)} 100%{transform:scale(1)} }
+
+/* ---------- level map ---------- */
+.maphead{
+  display:flex; align-items:center; gap:14px; background:#fff; border-radius:22px; padding:14px 16px;
+  box-shadow:0 8px 20px rgba(40,60,110,.14); border-top:8px solid var(--gc);
+}
+.maphead .bigicon{ flex:none; width:64px; height:64px; display:grid; place-items:center; font-size:48px; }
+.maphead .bigicon svg{ width:64px; height:64px; }
+.maphead h1{ font-size:clamp(22px,5.5vw,30px); font-weight:900; line-height:1.1; }
+.maphead p{ font-weight:700; color:var(--muted); font-size:14.5px; margin-top:4px; }
+.maphead .grow{ flex:1; min-width:0; }
+.levels{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px; margin:18px 0; }
+@media (max-width:420px){ .levels{ grid-template-columns:1fr 1fr; gap:12px; } }
+.lvl{
+  position:relative; border:none; text-align:left; border-radius:16px; padding:18px 12px 12px; min-height:112px;
+  background:var(--lc); color:#fff; display:flex; flex-direction:column; gap:3px;
+  box-shadow:inset 0 -6px 0 rgba(0,0,0,.2), 0 6px 14px rgba(20,30,60,.16);
+}
+.lvl::before{
+  content:""; position:absolute; left:14px; right:14px; top:-7px; height:9px;
+  background:radial-gradient(circle at 50% 80%, var(--lc) 0 6px, transparent 6.5px) left top/26px 9px repeat-x;
+  filter:brightness(1.12);
+}
+.lvl .ln{ font-size:30px; font-weight:900; line-height:1; text-shadow:0 2px 0 rgba(0,0,0,.2); }
+.lvl .lname{ font-size:14px; font-weight:800; line-height:1.15; }
+.lvl .lstars{ margin-top:auto; font-size:18px; letter-spacing:1px; }
+.lvl .lstars .no{ opacity:.35; filter:grayscale(1); }
+.lvl.locked{ background:#cfd7e6; color:#7b869c; box-shadow:inset 0 -6px 0 rgba(0,0,0,.08); }
+.lvl.locked::before{ background:radial-gradient(circle at 50% 80%, #cfd7e6 0 6px, transparent 6.5px) left top/26px 9px repeat-x; }
+.lvl.locked .ln::after{ content:" 🔒"; font-size:18px; }
+.lvl.next{ animation:bob 1.4s ease-in-out infinite; box-shadow:inset 0 -6px 0 rgba(0,0,0,.2), 0 0 0 4px #fff, 0 0 0 8px #ffb020; }
+.lvl:not(.locked):active{ transform:translateY(3px); }
+.lvl.endless{ grid-column:1/-1; min-height:80px; background:linear-gradient(120deg,#23314f,#5b3fd0); }
+.lvl.endless::before{ display:none; }
+.lvl.endless.locked{ background:#cfd7e6; }
+@keyframes bob{ 50%{ transform:translateY(-4px); } }
+.howto{ background:rgba(255,255,255,.75); border-radius:18px; padding:14px 16px; font-weight:700; color:#3a4766; font-size:15px; line-height:1.45; }
+.howto b{ color:var(--ink); }
+
+/* ---------- play ---------- */
+.play{ display:grid; gap:12px; grid-template-columns:minmax(0,1fr); }
+@media (min-width:800px) and (orientation:landscape){
+  .play{ grid-template-columns:minmax(0,1fr) 330px; align-items:start; }
+  .play .phead{ grid-column:1/-1; }
+  .side{ position:sticky; top:74px; }
+}
+.phead{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
+.ptitle{ font-weight:900; font-size:17px; background:#fff; padding:7px 14px; border-radius:999px; box-shadow:0 3px 10px rgba(40,60,110,.12); }
+.studs{ display:flex; gap:6px; }
+.stud{ width:24px; height:24px; border-radius:50%; background:#fff; border:3px solid #c7d2e6; }
+.stud.now{ border-color:#ffb020; animation:glow 1.1s infinite; }
+.stud.gold{ background:radial-gradient(circle at 35% 30%,#fff6b0,#ffc300 60%,#e0a100); border-color:#d69a00; }
+.stud.silver{ background:radial-gradient(circle at 35% 30%,#fff,#c3cad6 60%,#9aa3b3); border-color:#8e97a8; }
+.stud.miss{ background:#ffd9c2; border-color:#ff8a1f; }
+.stud.bolt{ background:#ffe16b; border-color:#ffb020; }
+.hearts{ font-size:22px; letter-spacing:2px; }
+.score{ font-weight:900; font-size:17px; background:#23314f; color:#fff; padding:6px 14px; border-radius:999px; }
+.stagewrap{ background:#fff; border-radius:22px; padding:16px 14px; box-shadow:0 8px 20px rgba(40,60,110,.14); min-width:0; }
+.stage{ min-height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+.stage.enter{ animation:slidein .35s ease-out; }
+@keyframes slidein{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+.prompt{ text-align:center; font-weight:800; font-size:clamp(15px,3.9vw,19px); margin-top:12px; line-height:1.35; color:#34405e; }
+.msg{ text-align:center; font-weight:800; font-size:16px; min-height:24px; margin-top:8px; line-height:1.35; }
+.msg.good{ color:var(--green); font-size:20px; }
+.msg.bad{ color:#d4383d; }
+.msg .hint{ display:block; margin-top:6px; background:#fff6d6; color:#5a4400; border-radius:12px; padding:8px 12px; font-weight:800; }
+.reveal{ margin-top:10px; }
+.reveal:empty{ display:none; }
+.side{ background:#fff; border-radius:22px; padding:12px; box-shadow:0 8px 20px rgba(40,60,110,.14); }
+.tools{ display:flex; gap:8px; margin-bottom:10px; }
+.tool{ flex:1; border:2px solid var(--line); background:#f6f8fc; border-radius:12px; padding:9px 6px; font-weight:900; font-size:15px; }
+.tool:active{ background:#e9eef8; }
+.pad{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px 9px; padding-top:6px; }
+.key{
+  --c:var(--blue);
+  position:relative; border:none; border-radius:10px; height:clamp(50px,7.2vh,64px);
+  background:var(--c); color:#fff; font-size:28px; font-weight:900;
+  box-shadow:inset 0 -5px 0 rgba(0,0,0,.22), inset 0 2px 0 rgba(255,255,255,.3);
+  text-shadow:0 2px 0 rgba(0,0,0,.2);
+}
+.key::before{
+  content:""; position:absolute; left:18%; right:18%; top:-5px; height:6px;
+  background:radial-gradient(circle at 50% 80%, var(--c) 0 4px, transparent 4.5px) center top/16px 6px repeat-x;
+  filter:brightness(1.12);
+}
+.key:active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,.22); }
+.key.del{ --c:#8d96a8; font-size:24px; }
+.key.go{ --c:var(--green); }
+.choices{ display:grid; gap:10px; }
+.choice{
+  border:none; border-radius:14px; padding:14px 12px; font-size:clamp(17px,4.4vw,21px); font-weight:900;
+  background:#eef3ff; color:var(--ink); box-shadow:inset 0 -4px 0 rgba(0,0,0,.1); text-align:center; line-height:1.25;
+}
+.choice:active{ transform:translateY(2px); }
+.choice.ok{ background:var(--green); color:#fff; animation:pop .35s; }
+.choice.no{ background:#ffe1e1; color:#c04040; text-decoration:line-through; animation:shake .36s; }
+.nextbtn{
+  width:100%; border:none; border-radius:16px; padding:18px; font-size:26px; font-weight:900; color:#fff;
+  background:var(--green); box-shadow:inset 0 -6px 0 rgba(0,0,0,.2); animation:bob 1.2s ease-in-out infinite;
+}
+.stage.win{ animation:pop .45s; }
+
+/* ---------- overlay (intro / results) ---------- */
+.overlay{ position:fixed; inset:0; z-index:50; background:rgba(20,30,55,.55); display:grid; place-items:center; padding:16px; animation:fade .2s; }
+@keyframes fade{ from{opacity:0} }
+.ocard{
+  width:min(520px,100%); max-height:calc(100vh - 32px); overflow:auto; background:#fff; border-radius:26px; padding:22px 20px 18px;
+  text-align:center; box-shadow:0 20px 50px rgba(0,0,0,.3); border-top:10px solid var(--gc,#ffb020); animation:popin .3s ease-out;
+}
+@keyframes popin{ from{ transform:scale(.85); opacity:0; } }
+.ocard .kicker{ font-weight:900; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; font-size:13px; }
+.ocard h2{ font-size:clamp(26px,7vw,34px); font-weight:900; margin:4px 0 8px; line-height:1.1; }
+.ocard p{ font-weight:700; color:#3f4a66; font-size:16.5px; line-height:1.45; }
+.ocard .demo{ margin:14px auto 4px; }
+.obtns{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:18px; }
+.btn{
+  border:none; border-radius:999px; padding:13px 22px; font-size:19px; font-weight:900; color:#fff; background:var(--green);
+  box-shadow:inset 0 -5px 0 rgba(0,0,0,.2);
+}
+.btn.alt{ background:#e9eef8; color:var(--ink); }
+.btn.blue{ background:var(--blue); }
+.btn:active{ transform:translateY(2px); }
+.bigstars{ font-size:54px; letter-spacing:6px; margin:6px 0; }
+.bigstars span{ display:inline-block; animation:starin .5s both; }
+.bigstars span.no{ filter:grayscale(1); opacity:.25; }
+@keyframes starin{ from{ transform:scale(0) rotate(-90deg); } }
+.badge{ display:inline-block; font-weight:900; font-size:15px; padding:6px 14px; border-radius:999px; background:#fff1b8; color:#6b4f00; margin:4px; }
+.badge.new{ background:#dff7e6; color:#12743a; }
+.resstuds{ display:flex; gap:6px; justify-content:center; margin:10px 0; }
+
+/* confetti bricks */
+.bit{ position:fixed; z-index:80; width:16px; height:10px; border-radius:3px; pointer-events:none; }
+
+
+/* ---------- phones: keep the keypad in reach ---------- */
+@media (max-width:600px){
+  .screen.playing{ padding-bottom:0; }
+  .play{ gap:10px; }
+  .phead{ flex-wrap:nowrap; gap:8px; }
+  .ptitle{ font-size:14.5px; padding:6px 11px; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .studs{ gap:4px; flex:none; }
+  .stud{ width:18px; height:18px; border-width:2.5px; }
+  .stagewrap{ padding:12px 10px; }
+  .stage{ min-height:140px; }
+  .prompt{ margin-top:8px; }
+  .side{ position:sticky; bottom:0; z-index:10; margin:0 -14px; border-radius:20px 20px 0 0;
+    padding:8px 12px calc(env(safe-area-inset-bottom) + 10px); box-shadow:0 -6px 22px rgba(40,60,110,.18); }
+  .tools{ margin-bottom:6px; }
+  .tool{ padding:6px; font-size:14px; }
+  .pad{ gap:9px 8px; }
+  .key{ height:clamp(44px, 6.4vh, 58px); font-size:25px; }
+  .nextbtn{ padding:14px; font-size:23px; }
+  #prog{ flex:none; white-space:nowrap; }
+  .hearts{ font-size:16px; letter-spacing:0; }
+  .score{ font-size:14px; padding:5px 10px; }
+}
+
+/* ---------- Googol Zoom ---------- */
+.zoomwin{
+  position:relative; width:100%; min-height:92px; border-radius:18px; overflow:hidden; color:#fff;
+  display:flex; align-items:center; gap:12px; padding:12px 64px 12px 14px; text-align:left;
+  background:
+    radial-gradient(circle at 12% 20%, #fff 0 1px, transparent 1.5px),
+    radial-gradient(circle at 70% 30%, #fff 0 1.2px, transparent 1.7px),
+    radial-gradient(circle at 40% 80%, #cfe8ff 0 1px, transparent 1.5px),
+    radial-gradient(circle at 88% 75%, #fff 0 1px, transparent 1.5px),
+    radial-gradient(circle at 55% 12%, #ffe9a8 0 1px, transparent 1.5px),
+    linear-gradient(135deg, #0d1433, #28195e 70%, #3c1f6e);
+  background-size:130px 90px, 170px 110px, 90px 70px, 150px 100px, 110px 80px, 100% 100%;
+}
+.zicon{ flex:none; font-size:50px; line-height:1; filter:drop-shadow(0 3px 6px rgba(0,0,0,.4)); }
+.zpow{ font-weight:900; font-size:22px; color:#ffe16b; line-height:1.2; }
+.zpow small{ font-size:13px; color:#b9c7ff; font-weight:800; }
+.zlabel{ font-weight:700; font-size:14.5px; line-height:1.3; margin-top:2px; }
+.rocket{ position:absolute; right:14px; bottom:12px; font-size:34px; transition:transform .5s ease-in; }
+.zoomwin.boost .rocket{ transform:translate(40px,-70px) scale(.6); }
+.zoomwin.zoom .zicon{ animation:zoomin .6s ease-out; }
+.zoomwin.zoom .ztext{ animation:slidein .5s ease-out; }
+.zoomwin.zoom .rocket{ animation:rocketin .6s ease-out; }
+@keyframes zoomin{ from{ transform:scale(3.2); opacity:0; } }
+@keyframes rocketin{ from{ transform:translate(-40px,60px); opacity:0; } }
+.zoomwin.mini{ margin-top:12px; min-height:70px; }
+.zoomwin.mini .zicon{ font-size:38px; }
+.qcard{ font-weight:900; font-size:clamp(24px,6.4vw,36px); text-align:center; line-height:1.45; margin:16px 4px 2px; }
+.num{ color:#1f6fd1; white-space:nowrap; }
+.gw{ color:#8a4fd8; }
+.slot{ display:inline-block; vertical-align:middle; min-width:1.8em; height:1.3em; line-height:1.3em; padding:0 .25em;
+  border-radius:12px; text-align:center; white-space:nowrap; }
+.slot.sup{ font-size:1.75em; min-width:1.3em; vertical-align:baseline; border-radius:10px; }
+.zrow{ display:flex; flex-wrap:wrap; justify-content:center; gap:3px; margin:6px 0; }
+.zrow span{ min-width:22px; height:30px; padding:0 4px; border-radius:6px; background:#e6efff; color:#1f4f9e; font-weight:900; font-size:17px; display:grid; place-items:center; }
+.zrow .one{ background:#ffc919; color:#23314f; }
+.zrow .g{ margin-left:9px; }
+.plates{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; margin:6px 0; }
+.plates .one.big{ font-weight:900; font-size:30px; background:#ffc919; border-radius:8px; padding:4px 12px; }
+.plate{ display:grid; grid-template-columns:repeat(10, 10px); gap:1px; background:#1f9d45; padding:5px; border-radius:6px; box-shadow:inset 0 -3px 0 rgba(0,0,0,.2); }
+.plate i{ width:10px; height:10px; border-radius:50%; background:#3dbb63; color:#e5ffe9; font-style:normal; font-size:7px; font-weight:900; line-height:10px; text-align:center; }
+.why{ text-align:center; font-weight:800; font-size:16px; margin:6px 0; line-height:1.45; color:#34405e; }
+.demo .zrow span{ min-width:30px; height:38px; font-size:22px; }
+@media (max-width:600px){
+  .zoomwin{ min-height:78px; padding:10px 54px 10px 12px; gap:10px; }
+  .zicon{ font-size:40px; }
+  .zpow{ font-size:19px; }
+  .zlabel{ font-size:13px; }
+  .rocket{ font-size:28px; }
+  .zrow span{ min-width:18px; height:26px; font-size:15px; padding:0 3px; }
+  .qcard{ margin-top:12px; }
+}
+.qcard .small{ display:block; font-size:.5em; color:var(--muted); font-weight:800; margin-top:4px; }
+
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+"use strict";
+/* =====================================================================
+   Math Lab — shared engine (inlined into every page)
+   ===================================================================== */
+
+// The game list. Each game unlocks when the previous game's level is cleared.
+const CATALOG = [
+  { id:"pyramids", file:"brick-pyramids.html",  title:"Brick Pyramids",  needs:null },
+  { id:"patterns", file:"pattern-machine.html", title:"Pattern Machine", needs:{ game:"pyramids", level:5 } },
+  { id:"googol",   file:"googol-zoom.html",     title:"Googol Zoom",     needs:{ game:"patterns", level:5 } },
+  { id:"gears",    file:"",                     title:"Gear Lab",        needs:{ game:"googol",   level:5 }, soon:true },
+];
+
+const rnd = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const group = s => String(s).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+const fmt = n => group(n);
+const $ = (sel, root) => (root || document).querySelector(sel);
+const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+
+/* ---------------- saved progress ---------------- */
+const Store = (() => {
+  const KEY = "mathLab.v1";
+  let st = null;
+  function load() {
+    if (st) return st;
+    try { st = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { st = null; }
+    if (!st || typeof st !== "object") st = {};
+    st.games = st.games || {};
+    st.seen = st.seen || {};
+    if (st.sound === undefined) st.sound = true;
+    if (st.voice === undefined) st.voice = true;
+    return st;
+  }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(load())); } catch (e) {} }
+  function game(id) { const s = load(); return s.games[id] || (s.games[id] = { stars:{}, best:0 }); }
+  const stars = (id, L) => game(id).stars[L] || 0;
+  const totalStars = id => Object.values(game(id).stars).reduce((a, b) => a + b, 0);
+  const allStars = () => CATALOG.reduce((t, g) => t + totalStars(g.id), 0);
+  function highest(id) { let h = 0; for (const k in game(id).stars) if (game(id).stars[k] > 0) h = Math.max(h, +k); return h; }
+  function levelOpen(id, L) {
+    if (L <= 1 || load().unlockAll) return true;
+    if (L === 11) return stars(id, 10) > 0;
+    return stars(id, L - 1) > 0 || stars(id, L) > 0;
+  }
+  function setStars(id, L, n) { const g = game(id); if (n > (g.stars[L] || 0)) g.stars[L] = n; save(); }
+  function setBest(id, n) { const g = game(id); if (n > (g.best || 0)) { g.best = n; save(); return true; } return false; }
+  function gameOpen(entry) { if (!entry.needs || load().unlockAll) return true; return highest(entry.needs.game) >= entry.needs.level; }
+  function get(k) { return load()[k]; }
+  function set(k, v) { load()[k] = v; save(); }
+  function reset() { const s = load(); s.games = {}; s.seen = {}; s.unlockAll = false; save(); }
+  return { load, save, game, stars, totalStars, allStars, highest, levelOpen, setStars, setBest, gameOpen, get, set, reset };
+})();
+
+/* ---------------- sound effects (Web Audio, no files) ---------------- */
+const Sfx = (() => {
+  let ctx = null;
+  function ac() {
+    if (!Store.get("sound")) return null;
+    try {
+      if (!ctx) { const C = window.AudioContext || window.webkitAudioContext; if (!C) return null; ctx = new C(); }
+      if (ctx.state === "suspended") ctx.resume();
+    } catch (e) { return null; }
+    return ctx;
+  }
+  function tone(f, at, dur, type, vol) {
+    const c = ac(); if (!c) return;
+    const t = c.currentTime + at, o = c.createOscillator(), g = c.createGain();
+    o.type = type || "triangle"; o.frequency.setValueAtTime(f, t);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol || 0.15, t + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + dur + 0.05);
+  }
+  function unlock() { const c = ac(); if (c) tone(1, 0, 0.01, "sine", 0.0002); }
+  ["touchend", "pointerdown", "keydown"].forEach(ev => document.addEventListener(ev, unlock, { passive:true }));
+  return {
+    tap()  { tone(740, 0, 0.05, "triangle", 0.05); },
+    snap() { tone(900, 0, 0.04, "square", 0.05); tone(1350, 0.03, 0.06, "triangle", 0.08); },
+    good() { [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.07, 0.18, "triangle", 0.13)); },
+    bad()  { tone(210, 0, 0.16, "sawtooth", 0.06); tone(160, 0.1, 0.22, "sawtooth", 0.06); },
+    win()  { [523, 659, 784, 659, 784, 1047, 1319].forEach((f, i) => tone(f, i * 0.11, 0.26, "triangle", 0.14)); },
+    meh()  { [392, 349, 330].forEach((f, i) => tone(f, i * 0.16, 0.25, "triangle", 0.1)); },
+    zoom() { for (let i = 0; i < 10; i++) tone(300 + i * 90, i * 0.03, 0.08, "sine", 0.06); },
+  };
+})();
+
+/* ---------------- read-aloud ---------------- */
+const Voice = (() => {
+  let voice = null;
+  function choose() {
+    try {
+      const vs = speechSynthesis.getVoices().filter(v => /^en[-_]US/i.test(v.lang));
+      voice = vs.find(v => /Samantha|Ava|Allison|Google US English/i.test(v.name)) || vs[0] || null;
+    } catch (e) {}
+  }
+  if ("speechSynthesis" in window) { choose(); try { speechSynthesis.onvoiceschanged = choose; } catch (e) {} }
+  // Automatic narration follows the Narration setting; force=true is for an explicit tap on a 🔊 button.
+  function say(text, force) {
+    if (!text || (!force && !Store.get("voice")) || !("speechSynthesis" in window)) return;
+    try {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(String(text).replace(/<[^>]+>/g, " "));
+      u.rate = 0.95; u.pitch = 1.05; if (voice) u.voice = voice;
+      speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+  function stop() { try { speechSynthesis.cancel(); } catch (e) {} }
+  return { say, stop };
+})();
+
+/* ---------------- confetti bricks ---------------- */
+function burst(x, y, n) {
+  const cols = ["#d9281c", "#1f6fd1", "#1f9d45", "#ffc919", "#ff8a1f", "#8a4fd8", "#23a9d0"];
+  for (let i = 0; i < (n || 18); i++) {
+    const b = document.createElement("div");
+    b.className = "bit"; b.style.background = pick(cols);
+    b.style.left = x + "px"; b.style.top = y + "px";
+    document.body.appendChild(b);
+    const a = Math.random() * Math.PI * 2, d = 60 + Math.random() * 130;
+    const dx = Math.cos(a) * d, dy = Math.sin(a) * d - 60;
+    try {
+      b.animate([
+        { transform:"translate(0,0) rotate(0deg)", opacity:1 },
+        { transform:`translate(${dx}px,${dy + 160}px) rotate(${rnd(-300, 300)}deg)`, opacity:0 }
+      ], { duration:900 + Math.random() * 400, easing:"cubic-bezier(.2,.7,.4,1)" }).onfinish = () => b.remove();
+    } catch (e) { setTimeout(() => b.remove(), 50); }
+  }
+}
+function burstAt(elm, n) { const r = elm.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + r.height / 2, n); }
+
+function toast(text) {
+  const old = document.getElementById("toast"); if (old) old.remove();
+  const t = document.createElement("div");
+  t.id = "toast"; t.className = "toast"; t.textContent = text;
+  document.body.appendChild(t);
+  setTimeout(() => t.classList.add("out"), 2200);
+  setTimeout(() => t.remove(), 2700);
+}
+
+const PRAISE = ["Awesome!", "Brilliant!", "Nailed it!", "Genius!", "Perfect!", "Super builder!", "Great thinking!", "You got it!"];
+const OOPS = ["Not quite — try again!", "Almost! Check it again.", "Hmm, try a different number.", "Close — have another go!"];
+const starStr = n => [1, 2, 3].map(i => `<span class="${i <= n ? "" : "no"}">⭐</span>`).join("");
+
+/* =====================================================================
+   MathGame(cfg) — level map, 8-puzzle rounds, number pad, stars.
+   cfg: { id, title, icon, iconSvg, color, tagline, howTo, levels:[{name, blurb, say, demo}],
+          make(level, i, boost) -> puzzle, endlessName, resultExtra(level) }
+   puzzle: { html, prompt, say, answers:[..] | choices:[{label, ok}], order, key,
+             hint(k, stage, S), wrong(k, v, stage, S), onType(k, buf, stage), onFill(k, stage, S),
+             onSolved(stage, S), reveal, mount(stage), autoSay }
+   ===================================================================== */
+function MathGame(cfg) {
+  const TOTAL = 8, EXPRESS = 5, ENDLESS = 11, HEARTS = 3;
+  const app = document.getElementById("app");
+  let S = null;
+
+  document.title = cfg.title + " · Math Lab";
+  app.innerHTML = `
+    <header class="top">
+      <a class="home" href="index.html" id="homeBtn">⬅ <span>Games</span></a>
+      <div class="gtitle"><span class="gi">${cfg.icon} </span>${cfg.title}</div>
+      <div class="pill" id="starsum">⭐ 0</div>
+      <button class="iconbtn" id="sndBtn" aria-label="Sound effects">🔔</button>
+      <button class="vbtn" id="voiceBtn" aria-label="Narration">🗣️ <span>On</span></button>
+    </header>
+    <main class="screen" id="screen"></main>`;
+  const screen = $("#screen");
+  const sndBtn = $("#sndBtn"), voiceBtn = $("#voiceBtn");
+  function syncToggles() {
+    sndBtn.classList.toggle("off", !Store.get("sound"));
+    sndBtn.textContent = Store.get("sound") ? "🔔" : "🔕";
+    voiceBtn.classList.toggle("off", !Store.get("voice"));
+    voiceBtn.innerHTML = `🗣️ <span>${Store.get("voice") ? "On" : "Off"}</span>`;
+    $("#starsum").textContent = "⭐ " + Store.totalStars(cfg.id);
+  }
+  sndBtn.onclick = () => { Store.set("sound", !Store.get("sound")); syncToggles(); Sfx.tap(); toast(Store.get("sound") ? "Sound effects on" : "Sound effects off"); };
+  voiceBtn.onclick = () => {
+    Store.set("voice", !Store.get("voice"));
+    if (!Store.get("voice")) Voice.stop();
+    syncToggles();
+    toast(Store.get("voice") ? "Narration on" : "Narration off — tap 🔊 Read it if you want to hear a question");
+  };
+  syncToggles();
+
+  document.addEventListener("keydown", e => {
+    if (!S || !S.P) return;
+    if (S.solved && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); goNext(); return; }
+    if (S.P.choices) { const n = parseInt(e.key, 10); const b = $$(".choice")[n - 1]; if (b) b.click(); return; }
+    if (/^[0-9]$/.test(e.key)) press(e.key);
+    else if (e.key === "Backspace") { e.preventDefault(); press("del"); }
+    else if (e.key === "Enter") check();
+  });
+
+  /* ---------- level map ---------- */
+  function showMap() {
+    S = null; Voice.stop(); closeOverlay(); syncToggles();
+    screen.className = "screen";
+    const g = Store.game(cfg.id);
+    let nextMarked = false, html = `
+      <div class="maphead" style="--gc:${cfg.color}">
+        <div class="bigicon">${cfg.iconSvg || cfg.icon}</div>
+        <div class="grow"><h1>${cfg.title}</h1><p>${cfg.tagline}</p></div>
+        <button class="iconbtn" id="sayHow" aria-label="Read how to play">🔊</button>
+      </div><div class="levels">`;
+    cfg.levels.forEach((L, idx) => {
+      const n = idx + 1, open = Store.levelOpen(cfg.id, n), st = g.stars[n] || 0;
+      const isNext = open && !st && !nextMarked; if (isNext) nextMarked = true;
+      html += `<button class="lvl ${open ? "" : "locked"} ${isNext ? "next" : ""}" data-l="${n}" style="--lc:${L.color || cfg.color}">
+        <span class="ln">${n}</span><span class="lname">${L.name}</span>
+        <span class="lstars">${open ? starStr(st) : ""}</span></button>`;
+    });
+    const eo = Store.levelOpen(cfg.id, ENDLESS);
+    html += `<button class="lvl endless ${eo ? "" : "locked"}" data-l="${ENDLESS}">
+        <span class="ln">∞</span><span class="lname">${cfg.endlessName || "Endless Challenge"} — ${eo ? "how far can you go? Best: " + (g.best || 0) : "finish Level 10 to open"}</span></button>`;
+    html += `</div><div class="howto">${cfg.howTo}</div>`;
+    screen.innerHTML = html;
+    $$(".lvl", screen).forEach(b => b.onclick = () => {
+      if (b.classList.contains("locked")) { Sfx.bad(); b.animate([{ transform:"translateX(-5px)" }, { transform:"translateX(5px)" }, { transform:"none" }], 250); return; }
+      Sfx.tap(); showIntro(+b.dataset.l);
+    });
+    $("#sayHow").onclick = () => Voice.say(cfg.howToSay || cfg.howTo, true);
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------- overlays ---------- */
+  function overlay(html, color) {
+    closeOverlay();
+    const o = document.createElement("div");
+    o.className = "overlay"; o.id = "ov";
+    o.innerHTML = `<div class="ocard" style="--gc:${color || cfg.color}">${html}</div>`;
+    document.body.appendChild(o);
+    return o;
+  }
+  function closeOverlay() { const o = $("#ov"); if (o) o.remove(); }
+
+  function showIntro(level) {
+    const L = level === ENDLESS
+      ? { name:cfg.endlessName || "Endless Challenge", blurb:"Puzzles keep coming and keep getting harder. You have 3 hearts — a wrong answer costs one. How far can you go?", say:"Endless challenge! Puzzles keep getting harder. You have three hearts. How far can you go?" }
+      : cfg.levels[level - 1];
+    const o = overlay(`
+      <div class="kicker">${level === ENDLESS ? "Challenge mode" : "Level " + level + " of " + cfg.levels.length}</div>
+      <h2>${L.name}</h2>
+      <p>${L.blurb}</p>
+      ${L.demo ? `<div class="demo">${L.demo}</div>` : ""}
+      <div class="obtns"><button class="btn alt" id="ovBack">⬅ Levels</button><button class="btn" id="ovGo">Go! ▶</button></div>`,
+      L.color);
+    Voice.say(L.say || L.blurb);
+    $("#ovBack", o).onclick = () => { Sfx.tap(); showMap(); };
+    $("#ovGo", o).onclick = () => { Sfx.tap(); Voice.stop(); closeOverlay(); startRound(level); };
+  }
+
+  /* ---------- a round ---------- */
+  function startRound(level) {
+    const endless = level === ENDLESS;
+    S = { level, endless, i:0, results:[], hearts:HEARTS, score:0, seen:new Set() };
+    const name = endless ? (cfg.endlessName || "Endless") : cfg.levels[level - 1].name;
+    screen.className = "screen playing";
+    screen.innerHTML = `
+      <div class="play">
+        <div class="phead">
+          <div class="ptitle">${endless ? "∞" : "Level " + level} · ${name}</div>
+          <div id="prog"></div>
+        </div>
+        <div class="stagewrap">
+          <div class="stage" id="stage"></div>
+          <div class="prompt" id="prompt"></div>
+          <div class="msg" id="msg"></div>
+          <div class="reveal" id="reveal"></div>
+        </div>
+        <div class="side">
+          <div class="tools" id="tools">
+            <button class="tool" id="sayQ">🔊 Read it</button>
+            <button class="tool" id="hintB">💡 Hint</button>
+          </div>
+          <div id="input"></div>
+        </div>
+      </div>`;
+    $("#sayQ").onclick = () => S && S.P && Voice.say(S.P.say || $("#prompt").textContent, true);
+    $("#hintB").onclick = () => { if (!S || S.solved) return; S.usedHint = true; showHint(S.cur); };
+    drawProgress();
+    nextPuzzle();
+    window.scrollTo(0, 0);
+  }
+
+  function drawProgress() {
+    const p = $("#prog"); if (!p) return;
+    if (S.endless) {
+      p.innerHTML = `<span class="hearts">${"❤️".repeat(S.hearts)}${"🤍".repeat(HEARTS - S.hearts)}</span> <span class="score">Score ${S.score}</span>`;
+      p.style.display = "flex"; p.style.gap = "10px"; p.style.alignItems = "center";
+      return;
+    }
+    let h = '<div class="studs">';
+    for (let i = 0; i < TOTAL; i++) {
+      const r = S.results[i];
+      h += `<span class="stud ${r || (i === S.i ? "now" : "")}"></span>`;
+    }
+    p.innerHTML = h + "</div>";
+  }
+
+  function makePuzzle() {
+    let P = null;
+    for (let t = 0; t < 25; t++) {
+      if (S.endless) {
+        const d = Math.min(10, 4 + Math.floor(S.score / 3));
+        const lvl = Math.max(3, d - rnd(0, 2));
+        P = cfg.make(lvl, rnd(3, 7), Math.max(0, Math.floor((S.score - 18) / 5)));
+      } else {
+        P = cfg.make(S.level, S.i, 0);
+      }
+      if (!P.key || !S.seen.has(P.key)) break;
+    }
+    if (P.key) S.seen.add(P.key);
+    return P;
+  }
+
+  function nextPuzzle() {
+    const P = makePuzzle();
+    Object.assign(S, { P, tries:{}, buf:{}, stale:{}, done:new Set(), mistakes:0, gaveUp:false, usedHint:false, cur:null, solved:false, locked:false });
+    const stage = $("#stage");
+    stage.className = "stage"; void stage.offsetWidth; stage.className = "stage enter";
+    stage.innerHTML = P.html;
+    $("#prompt").innerHTML = P.prompt || "";
+    setMsg("");
+    $("#reveal").innerHTML = "";
+    $("#tools").style.visibility = "visible";
+    S.blanks = [];
+    $$("[data-blank]", stage).forEach(b => {
+      const k = +b.dataset.blank;
+      S.blanks[k] = b; b.classList.add("blank"); b.textContent = "";
+      b.onclick = () => { if (!S.solved && !S.done.has(k)) { Sfx.tap(); select(k); } };
+    });
+    if (P.choices) drawChoices(); else { drawPad(); select(firstOpen()); }
+    if (P.mount) P.mount(stage, S);
+    drawProgress();
+    if (S.i > 0) window.scrollTo(0, 0);
+    if (P.autoSay) Voice.say(P.say);
+  }
+
+  // run fn later, but only if we're still on the same puzzle
+  function later(fn, ms) { const tok = S && S.P; setTimeout(() => { if (S && tok && S.P === tok) fn(); }, ms); }
+
+  function setMsg(html, cls) { const m = $("#msg"); m.className = "msg " + (cls || ""); m.innerHTML = html; }
+
+  function firstOpen() {
+    const order = S.P.order || S.P.answers.map((_, k) => k);
+    for (const k of order) if (!S.done.has(k)) return k;
+    return null;
+  }
+  function select(k) {
+    if (k == null) return;
+    S.blanks.forEach(b => b && b.classList.remove("sel"));
+    S.cur = k; S.blanks[k].classList.add("sel");
+    $$(".hl", $("#stage")).forEach(e => e.classList.remove("hl"));
+  }
+
+  function drawPad() {
+    const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "del", "0", "go"];
+    const cols = ["var(--red)", "var(--blue)", "var(--azure)", "var(--orange)", "var(--purple)", "var(--red)", "var(--blue)", "var(--azure)", "var(--orange)"];
+    $("#input").innerHTML = '<div class="pad">' + keys.map((k, i) =>
+      k === "del" ? '<button class="key del" data-k="del" aria-label="Delete">⌫</button>'
+      : k === "go" ? '<button class="key go" data-k="go" aria-label="Check">✓</button>'
+      : `<button class="key" data-k="${k}" style="--c:${k === "0" ? "var(--purple)" : cols[i]}">${k}</button>`).join("") + "</div>";
+    $$(".key").forEach(b => b.onclick = () => { const k = b.dataset.k; if (k === "go") check(); else { Sfx.tap(); press(k); } });
+  }
+
+  function press(d) {
+    if (!S || S.solved || S.locked || S.cur == null) return;
+    const k = S.cur, P = S.P;
+    let b = S.stale[k] ? "" : (S.buf[k] || "");
+    S.stale[k] = false;
+    const max = P.maxLen || Math.min(12, Math.max(3, String(P.answers[k]).length + 2));
+    if (d === "del") b = b.slice(0, -1);
+    else if (b.length < max) b = (b === "0" ? "" : b) + d;
+    S.buf[k] = b;
+    const el = S.blanks[k];
+    el.classList.remove("bad");
+    el.textContent = b ? group(b) : "";
+    if (P.onType) P.onType(k, b, $("#stage"), S);
+  }
+
+  function check() {
+    if (!S || S.solved || S.locked || S.cur == null) return;
+    const k = S.cur, b = S.stale[k] ? "" : S.buf[k];
+    if (!b) { const e = S.blanks[k]; e.classList.remove("bad"); void e.offsetWidth; e.classList.add("bad"); setTimeout(() => e.classList.remove("bad"), 400); return; }
+    const v = Number(b);
+    if (v === S.P.answers[k]) correct(k); else wrong(k, v);
+  }
+
+  function correct(k) {
+    const el = S.blanks[k];
+    S.done.add(k);
+    el.classList.remove("sel", "bad"); el.classList.add("ok");
+    Sfx.snap();
+    $$(".hl", $("#stage")).forEach(e => e.classList.remove("hl"));
+    if (S.P.onFill) S.P.onFill(k, $("#stage"), S);
+    const nk = firstOpen();
+    if (nk == null) solved();
+    else { setMsg(S.P.answers.length > 1 ? "✔ Good!" : "", "good"); select(nk); }
+  }
+
+  function loseHeart() {
+    S.hearts--; drawProgress();
+    if (S.hearts <= 0) { S.solved = true; later(gameOver, 900); return true; }
+    return false;
+  }
+
+  function wrong(k, v) {
+    const el = S.blanks[k];
+    S.tries[k] = (S.tries[k] || 0) + 1; S.stale[k] = true;
+    const free = S.P.freeTries && k === 0 && S.tries[k] <= S.P.freeTries;   // guess-and-check puzzles
+    if (!free) S.mistakes++;
+    el.classList.remove("bad"); void el.offsetWidth; el.classList.add("bad");
+    Sfx.bad();
+    if (S.endless && !free && loseHeart()) { setMsg("Out of hearts!", "bad"); return; }
+    let m = (S.P.wrong && S.P.wrong(k, v, $("#stage"), S)) || pick(OOPS);
+    if (!S.endless && S.tries[k] >= (S.P.maxTries || 3)) {
+      S.buf[k] = String(S.P.answers[k]); S.stale[k] = false;
+      el.textContent = group(S.P.answers[k]);
+      el.classList.remove("bad", "sel"); el.classList.add("given");
+      S.done.add(k); S.gaveUp = true;
+      setMsg(`The answer is <b>${group(S.P.answers[k])}</b>. Let's keep building!`, "bad");
+      if (S.P.onFill) S.P.onFill(k, $("#stage"), S);
+      const nk = firstOpen();
+      if (nk == null) { S.locked = true; later(solved, 900); } else select(nk);
+      return;
+    }
+    setMsg(m, "bad");
+    if (S.tries[k] >= (S.P.hintAfter || 2)) showHint(k, true);
+  }
+
+  function showHint(k, append) {
+    const P = S.P;
+    const h = P.hint ? P.hint(k, $("#stage"), S) : null;
+    if (!h) return;
+    const m = $("#msg");
+    if (!append) { m.className = "msg"; m.innerHTML = ""; }
+    const old = $(".hint", m); if (old) old.remove();
+    m.insertAdjacentHTML("beforeend", `<span class="hint">💡 ${h}</span>`);
+  }
+
+  function drawChoices() {
+    const P = S.P;
+    $("#input").innerHTML = '<div class="choices">' + P.choices.map((c, i) => `<button class="choice" data-i="${i}">${c.label}</button>`).join("") + "</div>";
+    $$(".choice").forEach(b => b.onclick = () => {
+      if (S.solved || S.locked || b.disabled) return;
+      const c = P.choices[+b.dataset.i];
+      if (c.ok) { b.classList.add("ok"); solved(); return; }
+      b.classList.add("no"); b.disabled = true; S.mistakes++;
+      S.tries[0] = (S.tries[0] || 0) + 1;
+      Sfx.bad();
+      if (S.endless && loseHeart()) { setMsg("Out of hearts!", "bad"); return; }
+      setMsg((P.wrong && P.wrong(0, c.label, $("#stage"), S)) || "Not that one — try again!", "bad");
+      if (S.tries[0] >= 1) showHint(0, true);
+      const left = $$(".choice").filter(x => !x.disabled && !P.choices[+x.dataset.i].ok);
+      if (!left.length) { S.gaveUp = true; S.locked = true; const okb = $$(".choice").find(x => P.choices[+x.dataset.i].ok); okb.classList.add("ok"); later(solved, 700); }
+    });
+  }
+
+  function solved() {
+    if (S.solved) return;
+    S.solved = true;
+    const res = S.gaveUp ? "miss" : (S.mistakes || S.usedHint) ? "silver" : "gold";
+    if (S.endless) S.score++; else S.results[S.i] = res;
+    drawProgress();
+    const stage = $("#stage");
+    stage.classList.remove("enter"); void stage.offsetWidth; stage.classList.add("win");
+    Sfx.good(); burstAt(stage, res === "gold" ? 22 : 12);
+    const praise = res === "gold" ? pick(PRAISE) : res === "silver" ? "You got it! 👍" : "Now you know it! 💪";
+    setMsg(praise, "good");
+    if (S.P.onSolved) S.P.onSolved(stage, S);
+    if (S.P.reveal) $("#reveal").innerHTML = S.P.reveal;
+    $("#tools").style.visibility = "hidden";
+    const last = !S.endless && (S.i + 1 >= TOTAL);
+    $("#input").innerHTML = `<button class="nextbtn" id="nextBtn">${last ? "Finish 🏁" : "Next ▶"}</button>`;
+    $("#nextBtn").onclick = () => { Sfx.tap(); goNext(); };
+  }
+
+  function goNext() {
+    if (!S || !S.solved || S.hearts <= 0) return;
+    Voice.stop();
+    if (S.endless) { S.i++; nextPuzzle(); return; }
+    S.i++;
+    if (S.i === EXPRESS && S.results.slice(0, EXPRESS).every(r => r === "gold")) return finish(true);
+    if (S.i >= TOTAL) return finish(false);
+    nextPuzzle();
+  }
+
+  function finish(express) {
+    const level = S.level;
+    const gold = S.results.filter(r => r === "gold").length;
+    const stars = express ? 3 : gold >= 7 ? 3 : gold === 6 ? 2 : gold === 5 ? 1 : 0;
+    const wasOpen = level < 10 ? Store.levelOpen(cfg.id, level + 1) : Store.levelOpen(cfg.id, ENDLESS);
+    const gamesBefore = CATALOG.map(g => Store.gameOpen(g));
+    Store.setStars(cfg.id, level, stars);
+    const gamesAfter = CATALOG.map(g => Store.gameOpen(g));
+    syncToggles();
+    let badges = "";
+    if (express) badges += `<span class="badge">⚡ EXPRESS PASS — 5 perfect in a row!</span>`;
+    if (stars > 0 && !wasOpen) badges += `<span class="badge new">🔓 ${level < 10 ? "Level " + (level + 1) + " unlocked!" : "Endless Challenge unlocked!"}</span>`;
+    CATALOG.forEach((g, i) => { if (!gamesBefore[i] && gamesAfter[i] && !g.soon) badges += `<span class="badge new">🎉 NEW GAME: ${g.title}! Find it on the games page.</span>`; });
+    const studs = S.results.map(r => `<span class="stud ${r}"></span>`).join("") + (express ? `<span class="stud bolt"></span>`.repeat(TOTAL - S.results.length) : "");
+    const title = stars === 3 ? "Master Builder!" : stars > 0 ? "Level Complete!" : "Keep Practicing!";
+    const text = stars > 0
+      ? `You solved <b>${gold}</b> of ${S.results.length} perfectly.`
+      : `You need 5 perfect puzzles to clear this level. You got <b>${gold}</b>. Try again — you're getting stronger!`;
+    const o = overlay(`
+      <div class="kicker">Level ${level} · ${cfg.levels[level - 1].name}</div>
+      <h2>${title}</h2>
+      <div class="bigstars">${[1, 2, 3].map(i => `<span class="${i <= stars ? "" : "no"}" style="animation-delay:${i * 0.18}s">⭐</span>`).join("")}</div>
+      <div class="resstuds">${studs}</div>
+      <p>${text}</p>
+      <div>${badges}</div>
+      ${cfg.resultExtra ? cfg.resultExtra(level, stars) : ""}
+      <div class="obtns">
+        <button class="btn alt" id="rMap">▦ Levels</button>
+        <button class="btn blue" id="rAgain">↻ Again</button>
+        ${stars > 0 && level < 10 ? `<button class="btn" id="rNext">Level ${level + 1} ▶</button>` : ""}
+        ${stars > 0 && level === 10 ? `<button class="btn" id="rEnd">∞ Endless ▶</button>` : ""}
+      </div>`);
+    if (stars > 0) { Sfx.win(); setTimeout(() => burst(innerWidth / 2, innerHeight / 3, 40), 250); } else Sfx.meh();
+    Voice.say(stars > 0 ? `${title} ${stars} star${stars > 1 ? "s" : ""}!` : "Keep practicing! You can do it.");
+    $("#rMap", o).onclick = () => { Sfx.tap(); showMap(); };
+    $("#rAgain", o).onclick = () => { Sfx.tap(); closeOverlay(); startRound(level); };
+    const rn = $("#rNext", o); if (rn) rn.onclick = () => { Sfx.tap(); showIntro(level + 1); };
+    const re = $("#rEnd", o); if (re) re.onclick = () => { Sfx.tap(); showIntro(ENDLESS); };
+    S.P = null;
+  }
+
+  function gameOver() {
+    const rec = Store.setBest(cfg.id, S.score);
+    const o = overlay(`
+      <div class="kicker">${cfg.endlessName || "Endless Challenge"}</div>
+      <h2>${rec ? "New Record! 🏆" : "Great Run!"}</h2>
+      <div class="bigstars" style="font-size:44px">${S.score}</div>
+      <p>puzzles solved · best: <b>${Store.game(cfg.id).best}</b></p>
+      <div class="obtns"><button class="btn alt" id="gMap">▦ Levels</button><button class="btn" id="gAgain">↻ Play again</button></div>`);
+    if (rec) { Sfx.win(); burst(innerWidth / 2, innerHeight / 3, 40); } else Sfx.meh();
+    Voice.say(rec ? `New record! ${S.score} puzzles!` : `Great run! ${S.score} puzzles.`);
+    $("#gMap", o).onclick = () => { Sfx.tap(); showMap(); };
+    $("#gAgain", o).onclick = () => { Sfx.tap(); closeOverlay(); startRound(ENDLESS); };
+    S.P = null;
+  }
+
+  // test hooks (used by automated checks; harmless in play)
+  window.__game = { get S() { return S; }, showMap, startRound, check, press, goNext };
+  showMap();
+}
+
+</script>
+<script>
+/* =====================================================================
+   Game 3 — Googol Zoom: zeros, powers of ten, googol and googolplex.
+   ===================================================================== */
+(() => {
+  const ONE = n => group("1" + "0".repeat(n));                  // 1,000,000
+  const P10 = n => `10<sup>${n}</sup>`;
+  const say10 = n => `10 to the ${n}`;
+  const SLOT = `<span class="slot" data-blank="0"></span>`;
+  const zs = n => n + (n === 1 ? " zero" : " zeros");
+  const SUP = `<sup><span class="slot sup" data-blank="0"></span></sup>`;
+  const NAME = { 1:"ten", 2:"hundred", 3:"thousand", 6:"million", 9:"billion", 12:"trillion", 15:"quadrillion", 18:"quintillion" };
+  const num = n => `<span class="num">${ONE(n)}</span>`;
+  const G = `<span class="gw">googol</span>`, GP = `<span class="gw">googolplex</span>`;
+
+  /* ---- visuals ---- */
+  function zeroRow(n, lead) {
+    let h = `<div class="zrow"><span class="one">${lead || 1}</span>`;
+    for (let j = 0; j < n; j++) h += `<span class="z${(n - j) % 3 === 0 && j > 0 ? " g" : ""}">0</span>`;
+    return h + "</div>";
+  }
+  function plates(n) {
+    const full = Math.floor(n / 100), rest = n % 100;
+    let h = `<div class="plates"><span class="one big">1</span>`;
+    for (let p = 0; p < full; p++) h += `<span class="plate">${"<i>0</i>".repeat(100)}</span>`;
+    if (rest) h += zeroRow(rest).replace('<span class="one">1</span>', "");
+    return h + `</div><div class="why">${full ? `${full === 1 ? "One plate" : full + " plates"} of 100 zeros` : ""}${full && rest ? ` + ${rest} more` : ""} = <b>${zs(n)}</b></div>`;
+  }
+  const why = t => `<div class="why">${t}</div>`;
+  const showZeros = n => n <= 36 ? zeroRow(n) : plates(n);
+
+  /* ---- journey: each level zooms further out ---- */
+  const M = [
+    { e:0,   icon:"🧒", label:"You! About 1 meter tall" },
+    { e:1,   icon:"🏠", label:"A house — about 10 meters tall" },
+    { e:2,   icon:"🏟️", label:"A soccer field — about 100 meters long" },
+    { e:3,   icon:"🏘️", label:"A small town — 1,000 meters (1 kilometer) across" },
+    { e:4,   icon:"🏔️", label:"Mount Everest — almost 10,000 meters high" },
+    { e:5,   icon:"🚀", label:"The edge of space — 100,000 meters up" },
+    { e:6,   icon:"🗽", label:"Chicago to New York — about 1,000,000 meters" },
+    { e:7,   icon:"🌍", label:"Planet Earth — more than 10,000,000 meters across" },
+    { e:8,   icon:"🌙", label:"The Moon — about 400,000,000 meters away" },
+    { e:9,   icon:"☀️", label:"The Sun — more than 1,000,000,000 meters across" },
+    { e:11,  icon:"🌞", label:"From Earth to the Sun — 150,000,000,000 meters" },
+    { e:13,  icon:"🪐", label:"Our whole solar system" },
+    { e:16,  icon:"✨", label:"One light-year — how far light travels in a year" },
+    { e:17,  icon:"⭐", label:"The nearest stars" },
+    { e:21,  icon:"🌌", label:"Our Milky Way galaxy" },
+    { e:23,  icon:"🌀", label:"Our galaxy neighborhood" },
+    { e:27,  icon:"🔭", label:"The whole universe we can see!" },
+    { e:50,  icon:"🌍", label:"Atoms in planet Earth", count:true },
+    { e:57,  icon:"☀️", label:"Atoms in the Sun", count:true },
+    { e:80,  icon:"⚛️", label:"Atoms in the WHOLE universe", count:true },
+    { e:100, icon:"💯", label:"A GOOGOL — more than all the atoms in the universe!", count:true },
+    { e:"gp", icon:"🤯", label:"A GOOGOLPLEX — 1 with a googol zeros. The universe is too small to write it down!", count:true },
+  ];
+  const LEVEL_M = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10], [11], [12, 13], [14, 15], [16], [17, 18, 19, 20], [21]];
+  const mIndex = (level, i) => { const L = LEVEL_M[level - 1]; return L[Math.min(L.length - 1, Math.floor(i * L.length / 8))]; };
+  function winHtml(m) {
+    const pow = m.e === "gp" ? `10<sup>googol</sup>` : P10(m.e);
+    const sub = m.count ? (m.e === "gp" ? "" : ` · about ${zs(m.e)}`) : " meters";
+    return `<div class="zicon">${m.icon}</div><div class="ztext"><div class="zpow">${pow}<small>${sub}</small></div><div class="zlabel">${m.label}</div></div><div class="rocket">🚀</div>`;
+  }
+
+  /* ---- question makers: each returns {q, say, a | choices, hint, reveal, key} ---- */
+  const choice = (right, wrongs) => shuffle([{ label:right, ok:true }, ...wrongs.map(w => ({ label:w, ok:false }))]);
+
+  const Q = {
+    // Level 1
+    countZeros(i) { const n = rnd(1, Math.min(7, 3 + i)); return { q:`How many zeros in ${num(n)}?`, say:"How many zeros are in this number?", a:n, key:"cz" + n,
+      hint:"Count the zeros after the 1!", reveal:zeroRow(n) + why(`${ONE(n)} has <b>${n}</b> zero${n > 1 ? "s" : ""}`) }; },
+    timesTen(i) { const n = rnd(1, 2 + Math.floor(i / 3)); return { q:`10 × ${num(n)} = ${SLOT}`, say:`10 times ${ONE(n)} equals what?`, a:10 ** (n + 1), key:"tt" + n,
+      hint:"Times 10 adds <b>one more zero</b>!", reveal:zeroRow(n + 1) + why(`${n} zero${n > 1 ? "s" : ""} + 1 zero = <b>${zs(n + 1)}</b>`) }; },
+    writeOne(i) { const n = rnd(2, Math.min(6, 2 + i)); return { q:`Write <b>1 with ${zs(n)}</b>:<br>${SLOT}`, say:`Write the number that is 1 with ${zs(n)}.`, a:10 ** n, key:"wo" + n,
+      hint:`Type 1, then ${zs(n)}.`, reveal:zeroRow(n) }; },
+    // Level 2
+    smash(i) { const a = rnd(1, 3), b = rnd(1, i < 4 ? 2 : 4); return { q:`${num(a)} × ${num(b)} = ${SLOT}`, say:`${ONE(a)} times ${ONE(b)} equals what?`, a:10 ** (a + b), key:`sm${a}.${b}`,
+      hint:`Count the zeros and add them: <b>${a} + ${b}</b>.`, reveal:zeroRow(a + b) + why(`${zs(a)} + ${zs(b)} = <b>${zs(a + b)}</b>`) }; },
+    smashZ(i) { const a = rnd(2, Math.min(9, 3 + i)), b = rnd(2, Math.min(9, 3 + i)); return { q:`${num(a)} × ${num(b)}<br>= 1 with ${SLOT} zeros`, say:`${ONE(a)} times ${ONE(b)} equals 1 with how many zeros?`, a:a + b, key:`sz${a}.${b}`,
+      hint:`Count the zeros in each number: <b>${a} + ${b}</b>.`, reveal:why(`${zs(a)} + ${zs(b)} = <b>${zs(a + b)}</b>`) + zeroRow(a + b) }; },
+    plusSame(i) { const a = rnd(2, 4); return { q:`${num(a)} + ${num(a)} = ${SLOT}`, say:`${ONE(a)} plus ${ONE(a)} equals what?`, a:2 * 10 ** a, key:"ps" + a,
+      hint:`Careful — this is <b>plus</b>, not times! 1 + 1 = 2…`, reveal:why(`Adding: ${ONE(a)} + ${ONE(a)} = <b>${fmt(2 * 10 ** a)}</b>. Multiplying would give ${ONE(2 * a)}!`) }; },
+    // Level 1–3 brain teasers
+    rollover(i) { const n = rnd(2, Math.min(7, 3 + i)); const x = 10 ** n - 1; return { q:`${fmt(x)} + 1 = ${SLOT}`, say:`${fmt(x)} plus 1 equals what?`, a:10 ** n, key:"ro" + n,
+      hint:"Every 9 rolls over to 0 — like a car's odometer!", reveal:zeroRow(n) + why(`All ${n} nines roll over → <b>${ONE(n)}</b>`) }; },
+    oneLess(i) { const n = rnd(3, Math.min(7, 3 + i)); return { q:`${num(n)} − 1 = ${SLOT}`, say:`${ONE(n)} minus 1 equals what?`, a:10 ** n - 1, key:"ol" + n,
+      hint:`One less than ${ONE(n)} is the biggest number with ${n} digits.`, reveal:why(`${ONE(n)} − 1 = <b>${fmt(10 ** n - 1)}</b> — all nines!`) }; },
+    digitsIn(i) {
+      const [e, nm] = pick(i < 3 ? [[3, "one thousand"], [4, "ten thousand"], [6, "one million"]] : [[5, "one hundred thousand"], [6, "one million"], [9, "one billion"], [12, "one trillion"], [7, "ten million"]]);
+      return { q:`How many <b>digits</b> does <b>${nm}</b> have?`, say:`How many digits does ${nm} have? Careful: digits, not zeros!`, a:e + 1, key:"di" + e,
+        hint:`Digits are all the number symbols: the 1 <b>and</b> every zero. ${nm[0].toUpperCase() + nm.slice(1)} has ${zs(e)}.`,
+        reveal:zeroRow(e) + why(`1 + ${zs(e)} = <b>${e + 1} digits</b>`) };
+    },
+    sameOrNot() {
+      const P = pick([
+        ["1,000 thousands", "1 million", 0, "1,000 × 1,000 = 1,000,000"],
+        ["100 hundreds", "10 thousands", 0, "both are 10,000"],
+        ["1,000 millions", "1 billion", 0, "1,000 × 1,000,000 = 1,000,000,000"],
+        ["500 thousands", "half a million", 0, "both are 500,000"],
+        ["20 hundreds", "2 thousands", 0, "both are 2,000"],
+        ["10 thousands", "1 hundred thousand", 2, "10,000 is smaller than 100,000"],
+        ["100 thousands", "1 million", 2, "100,000 is smaller than 1,000,000"],
+        ["1,000 hundreds", "10 thousands", 1, "100,000 is bigger than 10,000"],
+        ["10 millions", "1 billion", 2, "10,000,000 is much smaller than 1,000,000,000"],
+        ["a million thousands", "a billion", 0, "1,000,000 × 1,000 = 1,000,000,000"],
+      ]);
+      const [A, B, win, why_] = P;
+      const choices = shuffle([{ label:A, ok:win === 1 }, { label:B, ok:win === 2 }]).concat([{ label:"They're the same!", ok:win === 0 }]);
+      return { q:`Which is <b>bigger</b>?<br><span class="num">${A}</span> or <span class="num">${B}</span>`, say:`Which is bigger: ${A}, or ${B}? Or are they the same?`,
+        choices, key:"so" + A, hint:"Turn both into plain numbers, then compare.", reveal:why(`${win ? "" : "Same! "}${why_}`) };
+    },
+    countTo(i) {
+      const [nm, right, wrongs, fact] = pick([
+        ["one thousand", "about 17 minutes", ["about 17 seconds", "about 17 hours", "about 17 days"], "1,000 seconds ≈ 17 minutes"],
+        ["one million", "about 12 days", ["about 12 minutes", "about 12 hours", "about 12 years"], "1,000,000 seconds ≈ 11½ days — with no sleeping!"],
+        ["one billion", "about 32 years", ["about 32 days", "about 32 hours", "about 320 years"], "1,000,000,000 seconds ≈ 32 years — longer than a whole childhood!"],
+      ]);
+      return { q:`If you count <b>one number every second</b> without stopping, how long to reach <b>${nm}</b>?`,
+        say:`If you count one number every second, without ever stopping, how long does it take to count to ${nm}?`,
+        choices:choice(right, wrongs), key:"ct" + nm,
+        hint:"A minute has 60 seconds, an hour has 3,600, and a day has 86,400.", reveal:why(fact) };
+    },
+    extremes(i) {
+      const d = rnd(3, 6), big = Math.random() < 0.5;
+      return { q:`What is the <b>${big ? "biggest" : "smallest"}</b> number with <b>${d} digits</b>?`, say:`What is the ${big ? "biggest" : "smallest"} number with ${d} digits?`,
+        a:big ? 10 ** d - 1 : 10 ** (d - 1), key:`ex${d}${big}`,
+        hint:big ? `Use the biggest digit, ${d} times.` : `It starts with 1. Then fill the rest with the smallest digit.`,
+        reveal:why(`<b>${fmt(big ? 10 ** d - 1 : 10 ** (d - 1))}</b>`) };
+    },
+    howManyDigitNums() {
+      const d = pick([2, 2, 3, 4]); const lo = 10 ** (d - 1), hi = 10 ** d - 1;
+      return { q:`How many different <b>${d}-digit</b> numbers are there?`, say:`How many different ${d} digit numbers are there?`, a:hi - lo + 1, key:"hd" + d,
+        hint:`They go from ${fmt(lo)} up to ${fmt(hi)}. All the numbers up to ${fmt(hi)}, minus the ${fmt(lo - 1)} smaller ones.`,
+        reveal:why(`${fmt(hi)} − ${fmt(lo - 1)} = <b>${fmt(hi - lo + 1)}</b>`) };
+    },
+    zerosTo() {
+      const top = pick([50, 100, 100, 200]);
+      let z = 0; for (let k = 1; k <= top; k++) z += String(k).split("0").length - 1;
+      return { q:`You write every number from <b>1 to ${top}</b>. How many <b>zeros</b> do you write?`, say:`You write every number from 1 to ${top}. How many zeros do you write?`,
+        a:z, key:"zt" + top,
+        hint:top === 50 ? "Which numbers from 1 to 50 have a zero in them?" : "10, 20, 30… each have one zero. 100 has two. What about 101, 102…?",
+        reveal:why(top === 50 ? "10, 20, 30, 40, 50 → <b>5 zeros</b>" : top === 100 ? "10, 20 … 90 → 9 zeros, plus 100 → 2 zeros = <b>11</b>" : "1 to 100 → 11 zeros. 101–109 → 9, 110, 120 … 190 → 9, 200 → 2. Total <b>31</b>") };
+    },
+    legoTower(i) {
+      const [len, cm, label] = pick(i < 5 ? [["1 meter", 100, "1 meter = 100 centimeters"], ["10 meters (a house)", 1000, "10 meters = 1,000 centimeters"]]
+                                          : [["10 meters (a house)", 1000, "10 meters = 1,000 centimeters"], ["1 kilometer", 100000, "1 kilometer = 1,000 meters = 100,000 centimeters"]]);
+      return { q:`A Lego brick is about <b>1 centimeter</b> tall. How many bricks make a tower <b>${len}</b> tall?<br><small class="small">1 meter = 100 centimeters</small>`,
+        say:`A Lego brick is about 1 centimeter tall. How many bricks make a tower ${len} tall? Remember, 1 meter is 100 centimeters.`,
+        a:cm, key:"lt" + cm, hint:`One brick per centimeter. ${label}.`, reveal:why(`${label} → <b>${fmt(cm)} bricks</b>`) };
+    },
+    // Level 4
+    front(i) {
+      let a, b, m, n;
+      do { a = rnd(1, 9); b = rnd(1, 9); m = rnd(0, 3); n = rnd(0, 3); }
+      while (a * b > (i < 4 ? 20 : 45) || m + n < 1 || m + n > (i < 4 ? 4 : 5) || (a === 1 && m === 0) || (b === 1 && n === 0));
+      const x = a * 10 ** m, y = b * 10 ** n;
+      return { q:`${fmt(x)} × ${fmt(y)} = ${SLOT}`, say:`${fmt(x)} times ${fmt(y)} equals what?`, a:x * y, key:`fr${x}.${y}`,
+        hint:`First the front numbers: <b>${a} × ${b} = ${a * b}</b>. Then add the zeros: <b>${m} + ${n} = ${m + n}</b>.`,
+        reveal:zeroRow(m + n, a * b) + why(`${a} × ${b} = ${a * b}, then ${m + n} zero${m + n > 1 ? "s" : ""} → <b>${fmt(x * y)}</b>`) };
+    },
+    frontPlus(i) {
+      const m = rnd(1, 3), a = rnd(1, 7), b = rnd(1, 9 - a);
+      const x = a * 10 ** m, y = b * 10 ** m;
+      return { q:`${fmt(x)} + ${fmt(y)} = ${SLOT}`, say:`${fmt(x)} plus ${fmt(y)} equals what?`, a:x + y, key:`fp${x}.${y}`,
+        hint:`This is <b>plus</b>! Add the front numbers: ${a} + ${b} = ${a + b}, and keep the ${m} zero${m > 1 ? "s" : ""}.`,
+        reveal:why(`${a} + ${b} = ${a + b}, keep ${m} zero${m > 1 ? "s" : ""} → <b>${fmt(x + y)}</b>`) };
+    },
+    // Level 5
+    powZeros(i) { const n = rnd(2, i < 3 ? 9 : 30); return { q:`${P10(n)} = 1 with ${SLOT} zeros`, say:`${say10(n)} equals 1 with how many zeros?`, a:n, key:"pz" + n,
+      hint:`The little number up top tells you how many zeros!`, reveal:showZeros(n) }; },
+    powWrite(i) { const n = rnd(2, 9); return { q:`${num(n)} = 10${SUP}`, say:"This number equals 10 to the what?", a:n, key:"pw" + n,
+      hint:"Count the zeros — that's the little number!", reveal:why(`${ONE(n)} has ${zs(n)}, so it's <b>${P10(n)}</b>`) }; },
+    powMul(i) { const a = rnd(1, i < 4 ? 9 : 25), b = rnd(1, i < 4 ? 9 : 25); return { q:`${P10(a)} × ${P10(b)} = 10${SUP}`, say:`${say10(a)} times ${say10(b)} equals 10 to the what?`, a:a + b, key:`pm${a}.${b}`,
+      hint:`Times means add the zeros: <b>${a} + ${b}</b>.`, reveal:why(`${zs(a)} + ${zs(b)} = ${zs(a + b)} → <b>${P10(a + b)}</b>`) }; },
+    powMul3(i) { const a = rnd(1, 12), b = rnd(1, 12), c = rnd(1, 12); return { q:`${P10(a)} × ${P10(b)} × ${P10(c)} = 10${SUP}`, say:`${say10(a)} times ${say10(b)} times ${say10(c)} equals 10 to the what?`, a:a + b + c, key:`p3${a}.${b}.${c}`,
+      hint:`Add up all the little numbers: <b>${a} + ${b} + ${c}</b>.`, reveal:why(`${a} + ${b} + ${c} = <b>${a + b + c}</b> zeros`) }; },
+    // Level 6
+    bigNameZeros() { const e = pick([9, 12, 15, 18]); return { q:`How many zeros in one <b>${NAME[e]}</b>?`, say:`How many zeros are in one ${NAME[e]}?`, a:e, key:"bz" + e,
+      hint:"Each new name adds 3 zeros: thousand 3, million 6, billion 9, trillion 12, quadrillion 15…", reveal:zeroRow(e) + why(`one ${NAME[e]} = ${ONE(e)}`) }; },
+    nameTimes() {
+      const pairs = [[3, 3], [3, 6], [6, 3], [6, 6], [3, 9], [9, 3], [6, 9], [9, 6], [3, 12], [12, 3], [9, 9], [6, 12]];
+      const [x, y] = pick(pairs), s = x + y;
+      const wrongs = shuffle([3, 6, 9, 12, 15, 18].filter(v => v !== s)).slice(0, 3).map(v => NAME[v]);
+      return { q:`One ${NAME[x]} × one ${NAME[y]}<br>= one…`, say:`One ${NAME[x]} times one ${NAME[y]} equals one what?`, choices:choice(NAME[s], wrongs), key:`nt${x}.${y}`,
+        hint:`A ${NAME[x]} has ${zs(x)}${x === y ? "" : `, a ${NAME[y]} has ${zs(y)}`}. Add them: ${x} + ${y}.`, reveal:why(`${zs(x)} + ${zs(y)} = ${zs(s)} = <b>one ${NAME[s]}</b>`) };
+    },
+    nameTimesZ() { const x = pick([6, 9, 12, 15, 18]), y = pick([3, 6, 9, 12, 15, 18]); return { q:`A ${NAME[x]} × a ${NAME[y]}<br>= 1 with ${SLOT} zeros`, say:`A ${NAME[x]} times a ${NAME[y]} equals 1 with how many zeros?`, a:x + y, key:`nz${x}.${y}`,
+      hint:`A ${NAME[x]} has ${zs(x)}. A ${NAME[y]} has ${zs(y)}. Add them!`, reveal:why(`${x} + ${y} = <b>${zs(x + y)}</b>`) + showZeros(x + y) }; },
+    // Level 7
+    powDiv(i) { const a = rnd(5, i < 4 ? 15 : 40), b = rnd(1, a - 1); return { q:`${P10(a)} ÷ ${P10(b)} = 10${SUP}`, say:`${say10(a)} divided by ${say10(b)} equals 10 to the what?`, a:a - b, key:`pd${a}.${b}`,
+      hint:`Dividing <b>takes zeros away</b>: ${a} − ${b}.`, reveal:why(`${zs(a)} − ${zs(b)} = <b>${zs(a - b)}</b>`) }; },
+    numDiv(i) { const a = rnd(3, 7), b = rnd(1, a - 1); return { q:`${num(a)} ÷ ${num(b)} = ${SLOT}`, say:`${ONE(a)} divided by ${ONE(b)} equals what?`, a:10 ** (a - b), key:`nd${a}.${b}`,
+      hint:`Take away zeros: ${a} − ${b} = ${zs(a - b)}.`, reveal:zeroRow(a - b) + why(`${zs(a)} − ${zs(b)} = <b>${zs(a - b)}</b>`) }; },
+    howMany() {
+      const [small, big] = pick([[2, 3], [1, 3], [3, 6], [6, 9], [2, 6], [3, 9], [1, 6]]);
+      return { q:`How many <b>${NAME[small]}s</b> make one <b>${NAME[big]}</b>?<br>${SLOT}`, say:`How many ${NAME[small]}s make one ${NAME[big]}?`, a:10 ** (big - small), key:`hm${small}.${big}`,
+        hint:`A ${NAME[big]} has ${zs(big)}, a ${NAME[small]} has ${small}. Take away: ${big} − ${small} = ${zs(big - small)}.`,
+        reveal:why(`${fmt(10 ** (big - small))} × ${ONE(small)} = ${ONE(big)}`) };
+    },
+    missing() { const a = rnd(3, 7), b = rnd(1, a - 1); return { q:`${SLOT} × ${num(b)} = ${num(a)}`, say:`What times ${ONE(b)} equals ${ONE(a)}?`, a:10 ** (a - b), key:`ms${a}.${b}`,
+      hint:`How many zeros are missing? ${a} − ${b} = ${a - b}.`, reveal:why(`${ONE(a - b)} × ${ONE(b)} = ${ONE(a)}`) }; },
+    // Level 8
+    powPow() { const a = rnd(2, 10), b = rnd(2, 3); return { q:`(${P10(a)})<sup>${b}</sup> = 10${SUP}`, say:`${say10(a)}, to the ${b}, equals 10 to the what?`, a:a * b, key:`pp${a}.${b}`,
+      hint:`(${P10(a)})<sup>${b}</sup> means ${Array(b).fill(P10(a)).join(" × ")}. Add: ${Array(b).fill(a).join(" + ")}.`, reveal:why(`${Array(b).fill(a).join(" + ")} = ${b} × ${a} = <b>${a * b}</b>`) }; },
+    repeat() { const a = rnd(2, 6), r = rnd(3, 4); return { q:`${Array(r).fill(num(a)).join(" × ")}<br>= 1 with ${SLOT} zeros`, say:`${Array(r).fill(ONE(a)).join(" times ")} equals 1 with how many zeros?`, a:a * r, key:`rp${a}.${r}`,
+      hint:`${r} numbers with ${zs(a)} each: ${Array(r).fill(a).join(" + ")}.`, reveal:why(`${r} × ${a} = <b>${zs(a * r)}</b>`) + showZeros(a * r) }; },
+    namedPow() { const e = pick([3, 6, 9, 12]), r = pick([2, 3, 4]); return { q:`A ${Array(r).fill(NAME[e]).join(" × a ")}<br>= 1 with ${SLOT} zeros`, say:`A ${Array(r).fill(NAME[e]).join(" times a ")} equals 1 with how many zeros?`, a:e * r, key:`np${e}.${r}`,
+      hint:`A ${NAME[e]} has ${zs(e)}. You have ${r} of them: ${Array(r).fill(e).join(" + ")}.`, reveal:why(`${r} × ${e} = <b>${zs(e * r)}</b>`) }; },
+    square() { const a = rnd(5, 50); return { q:`${P10(a)} × ${P10(a)} = 10${SUP}`, say:`${say10(a)} times ${say10(a)} equals 10 to the what?`, a:2 * a, key:"sq" + a,
+      hint:`Double it: ${a} + ${a}.`, reveal:why(`${a} + ${a} = <b>${2 * a}</b>`) }; },
+    // Level 9 — googol
+    gZeros() { return { q:`How many zeros in a ${G}?`, say:"How many zeros are in a googol?", a:100, key:"g0", hint:"A googol is 10 to the 100.", reveal:plates(100) }; },
+    gg() { return { q:`${G} × ${G}<br>= 1 with ${SLOT} zeros`, say:"A googol times a googol equals 1 with how many zeros?", a:200, key:"gg", hint:"100 zeros + 100 zeros.", reveal:plates(200) }; },
+    gTimes() { const n = pick([1, 2, 3, 6, 9]); const nm = NAME[n]; return { q:`${G} × ${num(n)}<br>= 1 with ${SLOT} zeros`, say:`A googol times ${ONE(n)} equals 1 with how many zeros?`, a:100 + n, key:"gt" + n,
+      hint:`100 zeros + ${n} zero${n > 1 ? "s" : ""}.`, reveal:plates(100 + n) }; },
+    gDiv() { const n = pick([1, 2, 3, 6, 10, 50]); return { q:`${G} ÷ ${P10(n)}<br>= 1 with ${SLOT} zeros`, say:`A googol divided by ${say10(n)} equals 1 with how many zeros?`, a:100 - n, key:"gd" + n,
+      hint:`Dividing takes zeros away: 100 − ${n}.`, reveal:showZeros(100 - n) }; },
+    g3() { return { q:`${G} × ${G} × ${G}<br>= 1 with ${SLOT} zeros`, say:"A googol times a googol times a googol equals 1 with how many zeros?", a:300, key:"g3", hint:"100 + 100 + 100.", reveal:plates(300) }; },
+    g4() { return { q:`${G} × ${G} × ${G} × ${G}<br>= 1 with ${SLOT} zeros`, say:"Four googols multiplied together equals 1 with how many zeros?", a:400, key:"g4", hint:"100 + 100 + 100 + 100.", reveal:plates(400) }; },
+    gPow() { return { q:`a ${G} = 10${SUP}`, say:"A googol equals 10 to the what?", a:100, key:"gp", hint:"How many zeros does a googol have?", reveal:why(`googol = <b>${P10(100)}</b>`) }; },
+    gSqPow() { return { q:`${G} × ${G} = 10${SUP}`, say:"A googol times a googol equals 10 to the what?", a:200, key:"gs", hint:"100 + 100.", reveal:why(`${P10(100)} × ${P10(100)} = <b>${P10(200)}</b>`) }; },
+    gSelf() { return { q:`${G} ÷ ${G} = ${SLOT}`, say:"A googol divided by a googol equals what?", a:1, key:"gself", hint:"Any number divided by itself is…", reveal:why("Any number divided by itself is <b>1</b>!") }; },
+    gZero() { return { q:`${G} × 0 = ${SLOT}`, say:"A googol times zero equals what?", a:0, key:"gzero", hint:"Anything times zero is…", reveal:why("Anything times zero is <b>0</b> — even a googol!") }; },
+    gPlus() { return { q:`${G} + ${G} = ?`, say:"A googol plus a googol equals what?", choices:choice("2 with 100 zeros", ["1 with 200 zeros", "1 with 101 zeros", "2 with 200 zeros"]), key:"gplus",
+      hint:"This is <b>plus</b>! One googol + one googol = two googols.", reveal:why("Plus: <b>2 googols</b> = 2 with 100 zeros.<br>Times: googol × googol = 1 with 200 zeros.") }; },
+    gAtoms() { return { q:`Which is <b>bigger</b>?`, say:"Which is bigger? A googol, or the number of atoms in the whole universe?", choices:choice("A googol", ["All the atoms in the universe"]), key:"gatoms",
+      hint:"The universe has about 1 with 80 zeros atoms.", reveal:why("Atoms in the universe: about 1 with <b>80</b> zeros. A googol: 1 with <b>100</b> zeros!") }; },
+    gMillion() { const e = pick([6, 9, 12]); return { q:`${G} × a ${NAME[e]}<br>= 1 with ${SLOT} zeros`, say:`A googol times a ${NAME[e]} equals 1 with how many zeros?`, a:100 + e, key:"gm" + e,
+      hint:`A ${NAME[e]} has ${zs(e)}. 100 + ${e}.`, reveal:plates(100 + e) }; },
+    // Level 10 — googolplex
+    gpZeros() { return { q:`A ${GP} is 1 with how many zeros?`, say:"A googolplex is 1 with how many zeros?", choices:choice("a googol zeros", ["100 zeros", "a million zeros", "a googolplex zeros"]), key:"gp0",
+      hint:"Its name has 'googol' in it…", reveal:why(`googolplex = 10<sup>googol</sup> = 1 with <b>a googol</b> zeros`) }; },
+    gpG() { return { q:`${GP} × ${G}<br>= 1 with how many zeros?`, say:"A googolplex times a googol equals 1 with how many zeros?", choices:choice("a googol + 100", ["200", "a googol × 100", "a googolplex + 100"]), key:"gpg",
+      hint:"Add the zeros: a googol zeros + 100 zeros.", reveal:why("a googol zeros + 100 zeros = <b>a googol + 100</b> zeros") }; },
+    gpGp() { return { q:`${GP} × ${GP}<br>= 1 with how many zeros?`, say:"A googolplex times a googolplex equals 1 with how many zeros?", choices:choice("2 googols (a googol + a googol)", ["a googol × a googol", "200", "a googolplex"]), key:"gpgp",
+      hint:"Each googolplex has a googol zeros. Add the zeros!", reveal:why("a googol zeros + a googol zeros = <b>2 googols</b> of zeros") }; },
+    gpDiv() { return { q:`${GP} ÷ ${G}<br>= 1 with how many zeros?`, say:"A googolplex divided by a googol equals 1 with how many zeros?", choices:choice("a googol − 100", ["a googol", "0", "100"]), key:"gpd",
+      hint:"Dividing takes zeros away: a googol zeros − 100 zeros.", reveal:why("a googol − 100 zeros — still unbelievably many!") }; },
+    gpK() { const n = pick([1, 3, 6]); return { q:`${GP} × ${num(n)}<br>= 1 with how many zeros?`, say:`A googolplex times ${ONE(n)} equals 1 with how many zeros?`, choices:choice(`a googol + ${n}`, [`${100 + n}`, `a googol × ${fmt(10 ** n)}`, `${fmt(10 ** n)}`]), key:"gpk" + n,
+      hint:`Add the zeros: a googol + ${n}.`, reveal:why(`a googol zeros + ${n} zero${n > 1 ? "s" : ""} = <b>a googol + ${n}</b>`) }; },
+    gpBig() { return { q:`Which is <b>bigger</b>?`, say:"Which is bigger? A googolplex, or a googol times a googol?", choices:choice("A googolplex", ["A googol × a googol"]), key:"gpbig",
+      hint:"googol × googol has 200 zeros. How many zeros does a googolplex have?", reveal:why("googol × googol: 200 zeros. Googolplex: <b>a googol</b> zeros. Not even close!") }; },
+    gpSelf() { return { q:`${GP} ÷ ${GP} = ${SLOT}`, say:"A googolplex divided by a googolplex equals what?", a:1, key:"gpself", hint:"Any number divided by itself…", reveal:why("Still <b>1</b>! Any number divided by itself is 1.") }; },
+    gpGG() { return { q:`${GP} × ${G} × ${G}<br>= 1 with how many zeros?`, say:"A googolplex times a googol times a googol equals 1 with how many zeros?", choices:choice("a googol + 200", ["400", "a googol × 200", "a googol + 100"]), key:"gpgg",
+      hint:"a googol zeros + 100 + 100.", reveal:why("a googol + 100 + 100 = <b>a googol + 200</b> zeros") }; },
+    gpTen() { return { q:`${GP} ÷ 10<br>= 1 with how many zeros?`, say:"A googolplex divided by 10 equals 1 with how many zeros?", choices:choice("a googol − 1", ["a googol − 10", "99", "9"]), key:"gpten",
+      hint:"Dividing by 10 takes away <b>one</b> zero.", reveal:why("a googol zeros − 1 zero = <b>a googol − 1</b>") }; },
+    gpPow() { return { q:`(${P10(100)})<sup>3</sup> = 10${SUP}`, say:"10 to the 100, to the third, equals 10 to the what?", a:300, key:"gppow", hint:"That's googol × googol × googol: 100 + 100 + 100.", reveal:why("100 + 100 + 100 = <b>300</b>") }; },
+    gpPlexian() { return { q:`A <span class="gw">googolplexian</span> is 1 with a <b>googolplex</b> zeros! Which is the <b>biggest</b>?`, say:"A googolplexian is 1 with a googolplex zeros! Which is the biggest?",
+      choices:choice("googolplexian", ["googolplex", "googol", "googol × googol × googol"]), key:"gpx",
+      hint:"Which one has the most zeros?", reveal:why("googol: 100 zeros → googolplex: a googol zeros → googolplexian: a googolplex zeros!") }; },
+  };
+
+  const LEVELS = [
+    { name:"Zero Counter", color:"#1f6fd1", pool:i => i < 2 ? ["countZeros", "timesTen", "rollover"] : ["countZeros", "timesTen", "writeOne", "rollover"],
+      blurb:"Big numbers are made of <b>zeros</b>! Count them, and blast off from your own size.", say:"Level 1. Zero counter. Big numbers are made of zeros! Count them and blast off!",
+      demo:zeroRow(3) + why("1,000 has <b>3 zeros</b>") },
+    { name:"Zero Smash", color:"#8a4fd8", pool:i => i < 3 ? ["smash", "smash", "smashZ"] : ["smash", "smashZ", "smashZ", "plusSame"],
+      blurb:"Multiply numbers like 100 × 1,000. Secret trick: <b>add up the zeros</b>!", say:"Level 2. Zero smash. Multiply numbers like 100 times 1,000. Secret trick: add up the zeros!",
+      demo:why("100 × 1,000 → 2 zeros + 3 zeros = <b>100,000</b>") },
+    { name:"Brain Teasers", color:"#1f9d45", pool:i => i < 3 ? ["rollover", "oneLess", "digitsIn", "extremes", "sameOrNot"] : ["digitsIn", "sameOrNot", "countTo", "howManyDigitNums", "legoTower", "zerosTo", "extremes"],
+      blurb:"Tricky big-number puzzles. What's 999,999 + 1? How long would it take to count to a million?",
+      say:"Level 3. Brain teasers. Tricky big number puzzles. What's 999,999 plus 1? How long would it take to count to a million?",
+      demo:why("999 + 1 = <b>1,000</b> — all the 9s roll over, like a car's odometer!") },
+    { name:"Front Digits", color:"#ff8a1f", pool:i => i < 3 ? ["front"] : ["front", "front", "frontPlus"],
+      blurb:"30 × 200: multiply the front numbers (3 × 2 = 6), then add the zeros (1 + 2 = 3). That's <b>6,000</b>!",
+      say:"Level 4. Front digits. 30 times 200. Multiply the front numbers, 3 times 2 is 6. Then add the zeros. That's 6,000!" },
+    { name:"Power Code", color:"#d9281c", pool:i => i < 3 ? ["powZeros", "powWrite", "powMul"] : i < 5 ? ["powZeros", "powMul", "powMul"] : ["powMul", "powMul3", "powZeros"],
+      blurb:"Scientists write 1,000 as 10³. The little number up top is <b>how many zeros</b>!", say:"Level 5. Power code. Scientists write 1,000 as 10 to the 3. The little number up top is how many zeros!",
+      demo:why(`${P10(3)} = 1,000 · ${P10(6)} = 1,000,000`) },
+    { name:"Giant Names", color:"#23a9d0", pool:() => ["bigNameZeros", "nameTimes", "nameTimesZ"],
+      blurb:"After trillion comes <b>quadrillion</b> (15 zeros) and <b>quintillion</b> (18 zeros)!", say:"Level 6. Giant names. After trillion comes quadrillion, with 15 zeros, and quintillion, with 18 zeros!",
+      demo:why("billion 9 · trillion 12 · quadrillion 15 · quintillion 18") },
+    { name:"Zero Chop", color:"#1f6fd1", pool:() => ["powDiv", "numDiv", "howMany", "missing"],
+      blurb:"Dividing <b>takes zeros away</b>. How many thousands make a million?", say:"Level 7. Zero chop. Dividing takes zeros away. How many thousands make a million?",
+      demo:why("1,000,000 ÷ 1,000 → 6 − 3 = 3 zeros = <b>1,000</b>") },
+    { name:"Power Towers", color:"#8a4fd8", pool:() => ["powPow", "repeat", "namedPow", "square"],
+      blurb:"Multiply the same number again and again: a million × a million × a million!", say:"Level 8. Power towers. Multiply the same number again and again. A million times a million times a million!",
+      demo:why(`(${P10(2)})<sup>3</sup> = ${P10(2)} × ${P10(2)} × ${P10(2)} = ${P10(6)}`) },
+    { name:"Googol!", color:"#1f9d45", pool:i => i < 4 ? ["gg", "gTimes", "gDiv", "gPow", "gSelf", "gZero", "gAtoms"] : ["gg", "g3", "g4", "gTimes", "gDiv", "gSqPow", "gPlus", "gMillion", "gZero"],
+      first:"gZeros",
+      blurb:"A <b>googol</b> is 1 with 100 zeros — that's a Lego plate with 100 studs of zeros!", say:"Level 9. Googol! A googol is 1 with 100 zeros.",
+      demo:plates(100) },
+    { name:"Googolplex", color:"#d9281c", pool:i => i < 4 ? ["gpG", "gpGp", "gpBig", "gpSelf", "gpK", "gg"] : ["gpG", "gpGp", "gpDiv", "gpK", "gpGG", "gpTen", "gpPow", "gpPlexian"],
+      first:"gpZeros",
+      blurb:"A <b>googolplex</b> is 1 with a <b>googol</b> zeros. There isn't enough room in the whole universe to write it!",
+      say:"Level 10. Googolplex! A googolplex is 1 with a googol zeros. There isn't enough room in the whole universe to write it!",
+      demo:why(`googolplex = 10<sup>googol</sup>`) },
+  ];
+
+  function make(level, i, boost) {
+    const L = LEVELS[level - 1];
+    const name = (i === 0 && L.first && !boost) ? L.first : pick(L.pool(i));
+    const q = Q[name](Math.min(7, i + boost));
+    const mi = boost ? Math.min(M.length - 1, 16 + boost) : mIndex(level, i);
+    const choices = !!q.choices;
+    const qh = choices || q.q.includes("data-blank") ? q.q : `${q.q}<br>${SLOT}`;
+    const P = {
+      html:`<div class="zoomwin" data-m="${mi}">${winHtml(M[mi])}</div><div class="qcard">${qh}</div>`,
+      prompt:choices ? "Tap the right answer." : "",
+      say:q.say, autoSay:true, key:q.key,
+      answers:choices ? [0] : [q.a],
+      choices:q.choices,
+      maxLen:choices ? undefined : Math.max(3, String(q.a).length + 2),
+      hint:() => q.hint,
+      reveal:q.reveal,
+      onSolved(stage, S) {
+        const win = $(".zoomwin", stage);
+        win.classList.add("boost");
+        if (boost || S.endless) return;
+        const ni = mIndex(level, S.i + 1);
+        if (S.i + 1 < 8 && ni !== mi) {
+          Sfx.zoom();
+          setTimeout(() => { win.innerHTML = winHtml(M[ni]); win.classList.remove("boost"); win.classList.add("zoom"); }, 500);
+        }
+      },
+    };
+    return P;
+  }
+
+  window.GOOGOL = { LEVELS, make, Q, M };
+
+  MathGame({
+    id:"googol", title:"Googol Zoom", icon:"🚀", color:"#23314f",
+    iconSvg:`<svg viewBox="0 0 64 64"><rect x="1" y="1" width="62" height="62" rx="14" fill="#141a3d"/><circle cx="12" cy="14" r="1.6" fill="#fff"/><circle cx="50" cy="10" r="1.3" fill="#fff"/><circle cx="54" cy="44" r="1.5" fill="#fff"/><circle cx="8" cy="46" r="1.2" fill="#fff"/><text x="31" y="41" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="21" fill="#ffe16b">10</text><text x="46" y="29" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="12" fill="#7fe3ff">100</text></svg>`,
+    tagline:"Zeros, powers of ten, googol and googolplex.",
+    howTo:`<b>How to play:</b> answer the big-number questions to zoom your rocket out — from your own size, past Earth, the Sun and the galaxy, all the way to a <b>googolplex</b>. Tap 🔊 to hear a question again. Clear <b>Level 5</b> to unlock the next game!`,
+    howToSay:"Answer big number questions to zoom your rocket out, from your own size, past the Earth, the Sun, and the galaxy, all the way to a googolplex!",
+    levels:LEVELS, make,
+    endlessName:"Endless Zoom",
+    resultExtra(level, stars) {
+      if (!stars) return "";
+      const m = M[mIndex(level, 7)];
+      return `<div class="zoomwin mini">${winHtml(m)}</div><p style="margin-top:6px">🚀 You zoomed out to: <b>${m.label.split(" — ")[0]}</b></p>`;
+    },
+  });
+})();
+
+</script>
+</body>
+</html>
