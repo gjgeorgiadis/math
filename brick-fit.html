@@ -296,21 +296,23 @@ sup{ font-size:.58em; vertical-align:super; line-height:0; }
    ===================================================================== */
 
 // The game list. Each game unlocks when the previous game's level is cleared.
+// The first three games are open from the start. After that, clearing Level 3 of a game
+// opens the game three places further down the list — so there are always ~3 to choose from.
 const CATALOG = [
   { id:"pyramids",  file:"brick-pyramids.html",  title:"Brick Pyramids",  needs:null },
-  { id:"patterns",  file:"pattern-machine.html", title:"Pattern Machine", needs:{ game:"pyramids",  level:5 } },
-  { id:"googol",    file:"googol-zoom.html",     title:"Googol Zoom",     needs:{ game:"patterns",  level:5 } },
-  { id:"brickfit",  file:"brick-fit.html",       title:"Brick Fit",       needs:{ game:"googol",    level:5 } },
-  { id:"takeaway",  file:"take-away.html",       title:"Take-Away",       needs:{ game:"brickfit",  level:5 } },
-  { id:"gears",     file:"gear-lab.html",        title:"Gear Lab",        needs:{ game:"takeaway",  level:5 } },
-  { id:"mystery",   file:"mystery-machine.html", title:"Mystery Machine", needs:{ game:"gears",     level:5 } },
-  { id:"target",    file:"target-builder.html",  title:"Target Builder",  needs:{ game:"mystery",   level:5 } },
-  { id:"ways",      file:"how-many-ways.html",   title:"How Many Ways",   needs:{ game:"target",    level:5 } },
-  { id:"balance",   file:"balance-scale.html",   title:"Balance Scale",   needs:{ game:"ways",      level:5 } },
-  { id:"primes",    file:"prime-factory.html",   title:"Prime Factory",   needs:{ game:"balance",   level:5 } },
-  { id:"binary",    file:"binary-lights.html",   title:"Binary Lights",   needs:{ game:"primes",    level:5 } },
-  { id:"belowzero", file:"below-zero.html",      title:"Below Zero",      needs:{ game:"binary",    level:5 } },
-  { id:"fractions", file:"fraction-bricks.html", title:"Fraction Bricks", needs:{ game:"belowzero", level:5 } },
+  { id:"patterns",  file:"pattern-machine.html", title:"Pattern Machine", needs:null },
+  { id:"googol",    file:"googol-zoom.html",     title:"Googol Zoom",     needs:null },
+  { id:"brickfit",  file:"brick-fit.html",       title:"Brick Fit",       needs:{ game:"pyramids",  level:3 } },
+  { id:"takeaway",  file:"take-away.html",       title:"Take-Away",       needs:{ game:"patterns",  level:3 } },
+  { id:"gears",     file:"gear-lab.html",        title:"Gear Lab",        needs:{ game:"googol",    level:3 } },
+  { id:"mystery",   file:"mystery-machine.html", title:"Mystery Machine", needs:{ game:"brickfit",  level:3 } },
+  { id:"target",    file:"target-builder.html",  title:"Target Builder",  needs:{ game:"takeaway",  level:3 } },
+  { id:"ways",      file:"how-many-ways.html",   title:"How Many Ways",   needs:{ game:"gears",     level:3 } },
+  { id:"balance",   file:"balance-scale.html",   title:"Balance Scale",   needs:{ game:"mystery",   level:3 } },
+  { id:"primes",    file:"prime-factory.html",   title:"Prime Factory",   needs:{ game:"target",    level:3 } },
+  { id:"binary",    file:"binary-lights.html",   title:"Binary Lights",   needs:{ game:"ways",      level:3 } },
+  { id:"belowzero", file:"below-zero.html",      title:"Below Zero",      needs:{ game:"balance",   level:3 } },
+  { id:"fractions", file:"fraction-bricks.html", title:"Fraction Bricks", needs:{ game:"primes",    level:3 } },
 ];
 
 const rnd = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
@@ -1271,5 +1273,22 @@ function MathGame(cfg) {
 })();
 
 </script>
+<!-- Default Statcounter code for Math Games
+https://gjgeorgiadis.github.io/math/ -->
+<script type="text/javascript">
+var sc_project=13355837; 
+var sc_invisible=1; 
+var sc_security="1eea3e71"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/13355837/0/1eea3e71/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 </body>
 </html>

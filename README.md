@@ -21,10 +21,16 @@ below-zero.html       13  negative numbers
 fraction-bricks.html  14  fractions
 ```
 
-Each game unlocks when **Level 5** of the one before it is cleared, in the order above.
+The **first three games are open from the start**. After that, clearing **Level 3** of a game opens
+the next locked game in the list, so there are always about three games to choose from and mastering
+any one of them moves the queue along.
 
 Progress is saved in the browser under the key `mathLab.v1`, so the pages must be served from one
 place (a GitHub Pages site, a local web server) for unlocks to carry from the index to the games.
+
+Every page carries the Statcounter tag for https://gjgeorgiadis.github.io/math/ (project 13355837,
+invisible mode) just before `</body>`. It loads asynchronously, so if it is blocked or offline the
+games carry on exactly as normal.
 
 ---
 
@@ -44,8 +50,8 @@ level in a few minutes instead of grinding through easy questions.
 for it sooner); after 3 the answer is filled in and the game moves on. The 🔊 button reads the
 question aloud.
 
-**Unlocking.** Clearing **Level 5** of a game unlocks the next game. Clearing **Level 10** opens that
-game's Endless mode: puzzles keep coming and keep getting harder, 3 hearts, one lost per wrong
+**Unlocking.** Clearing **Level 3** of a game unlocks the next locked game in the list (the first
+three are open from the start). Clearing **Level 10** opens that game's Endless mode: puzzles keep coming and keep getting harder, 3 hearts, one lost per wrong
 answer, and a best score is kept. The games page only ever shows the games that are unlocked plus one
 locked card showing what it takes to open the next one, so the child is never facing ten choices.
 
