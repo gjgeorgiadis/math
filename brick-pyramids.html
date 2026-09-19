@@ -187,7 +187,12 @@ sup{ font-size:.58em; vertical-align:super; line-height:0; }
 .key:active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,.22); }
 .key.del{ --c:#8d96a8; font-size:24px; }
 .key.go{ --c:var(--green); }
+.key.sign{ --c:#5d6883; font-size:22px; }
+.key.go.wide{ grid-column:span 3; height:clamp(44px,5.5vh,54px); }
 .choices{ display:grid; gap:10px; }
+.choices.pics{ grid-template-columns:1fr 1fr; gap:12px; }
+.choices.pics .choice{ padding:10px; display:flex; align-items:center; justify-content:center; min-height:96px; }
+@media (max-width:600px){ .choices.pics .choice{ min-height:80px; padding:8px; } }
 .choice{
   border:none; border-radius:14px; padding:14px 12px; font-size:clamp(17px,4.4vw,21px); font-weight:900;
   background:#eef3ff; color:var(--ink); box-shadow:inset 0 -4px 0 rgba(0,0,0,.1); text-align:center; line-height:1.25;
@@ -195,6 +200,9 @@ sup{ font-size:.58em; vertical-align:super; line-height:0; }
 .choice:active{ transform:translateY(2px); }
 .choice.ok{ background:var(--green); color:#fff; animation:pop .35s; }
 .choice.no{ background:#ffe1e1; color:#c04040; text-decoration:line-through; animation:shake .36s; }
+.nextbtn.take{ background:var(--blue); animation:none; }
+.nextbtn.take.dim{ background:#aeb8c9; }
+.nextbtn.both{ background:var(--purple); margin-top:10px; font-size:19px; animation:none; }
 .nextbtn{
   width:100%; border:none; border-radius:16px; padding:18px; font-size:26px; font-weight:900; color:#fff;
   background:var(--green); box-shadow:inset 0 -6px 0 rgba(0,0,0,.2); animation:bob 1.2s ease-in-out infinite;
@@ -278,10 +286,20 @@ sup{ font-size:.58em; vertical-align:super; line-height:0; }
 
 // The game list. Each game unlocks when the previous game's level is cleared.
 const CATALOG = [
-  { id:"pyramids", file:"brick-pyramids.html",  title:"Brick Pyramids",  needs:null },
-  { id:"patterns", file:"pattern-machine.html", title:"Pattern Machine", needs:{ game:"pyramids", level:5 } },
-  { id:"googol",   file:"googol-zoom.html",     title:"Googol Zoom",     needs:{ game:"patterns", level:5 } },
-  { id:"gears",    file:"",                     title:"Gear Lab",        needs:{ game:"googol",   level:5 }, soon:true },
+  { id:"pyramids",  file:"brick-pyramids.html",  title:"Brick Pyramids",  needs:null },
+  { id:"patterns",  file:"pattern-machine.html", title:"Pattern Machine", needs:{ game:"pyramids",  level:5 } },
+  { id:"googol",    file:"googol-zoom.html",     title:"Googol Zoom",     needs:{ game:"patterns",  level:5 } },
+  { id:"brickfit",  file:"brick-fit.html",       title:"Brick Fit",       needs:{ game:"googol",    level:5 } },
+  { id:"takeaway",  file:"take-away.html",       title:"Take-Away",       needs:{ game:"brickfit",  level:5 } },
+  { id:"gears",     file:"gear-lab.html",        title:"Gear Lab",        needs:{ game:"takeaway",  level:5 } },
+  { id:"mystery",   file:"mystery-machine.html", title:"Mystery Machine", needs:{ game:"gears",     level:5 } },
+  { id:"target",    file:"target-builder.html",  title:"Target Builder",  needs:{ game:"mystery",   level:5 } },
+  { id:"ways",      file:"how-many-ways.html",   title:"How Many Ways",   needs:{ game:"target",    level:5 } },
+  { id:"balance",   file:"balance-scale.html",   title:"Balance Scale",   needs:{ game:"ways",      level:5 } },
+  { id:"primes",    file:"prime-factory.html",   title:"Prime Factory",   needs:{ game:"balance",   level:5 } },
+  { id:"binary",    file:"binary-lights.html",   title:"Binary Lights",   needs:{ game:"primes",    level:5 } },
+  { id:"belowzero", file:"below-zero.html",      title:"Below Zero",      needs:{ game:"binary",    level:5 } },
+  { id:"fractions", file:"fraction-bricks.html", title:"Fraction Bricks", needs:{ game:"belowzero", level:5 } },
 ];
 
 const rnd = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
@@ -359,28 +377,44 @@ const Sfx = (() => {
   };
 })();
 
-/* ---------------- read-aloud ---------------- */
+/* ---------------- read-aloud (deep male voice) ---------------- */
 const Voice = (() => {
-  let voice = null;
-  function choose() {
-    try {
-      const vs = speechSynthesis.getVoices().filter(v => /^en[-_]US/i.test(v.lang));
-      voice = vs.find(v => /Samantha|Ava|Allison|Google US English/i.test(v.name)) || vs[0] || null;
-    } catch (e) {}
+  let voice = null, picked = false;
+  // Best deep male voices first; the browser only has a few of these installed.
+  const WANT = [
+    /\bAlex\b/i,                                           // macOS, deep male
+    /\bAaron\b/i,                                          // iOS/iPadOS, US male
+    /Microsoft\s+(Guy|David|Mark|Christopher|Eric|Ryan|Brandon|Steffan)\b/i,
+    /Google (UK|US) English Male/i,
+    /\bDaniel\b/i,                                         // British male
+    /\b(Arthur|Oliver|Gordon|Lee|Rishi|Nathan|Tom|James)\b/i,
+    /\b(Fred|Eddy|Reed|Rocko|Grandpa|Junior|Ralph|Albert)\b/i,
+  ];
+  function bestOf(list) {
+    const en = (list || []).filter(v => /^en/i.test(v.lang || ""));
+    const us = en.filter(v => /^en[-_](US|CA)/i.test(v.lang));
+    for (const re of WANT) {
+      const hit = us.find(v => re.test(v.name)) || en.find(v => re.test(v.name));
+      if (hit) return hit;
+    }
+    return us[0] || en[0] || null;
   }
+  function choose() { try { const l = speechSynthesis.getVoices(); if (l && l.length) { voice = bestOf(l); picked = true; } } catch (e) {} }
   if ("speechSynthesis" in window) { choose(); try { speechSynthesis.onvoiceschanged = choose; } catch (e) {} }
   // Automatic narration follows the Narration setting; force=true is for an explicit tap on a 🔊 button.
   function say(text, force) {
     if (!text || (!force && !Store.get("voice")) || !("speechSynthesis" in window)) return;
     try {
+      if (!picked) choose();
       speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(String(text).replace(/<[^>]+>/g, " "));
-      u.rate = 0.95; u.pitch = 1.05; if (voice) u.voice = voice;
+      u.rate = 0.94; u.pitch = 0.72;          // slower and low = friendly deep voice
+      if (voice) { u.voice = voice; u.lang = voice.lang; }
       speechSynthesis.speak(u);
     } catch (e) {}
   }
   function stop() { try { speechSynthesis.cancel(); } catch (e) {} }
-  return { say, stop };
+  return { say, stop, bestOf, name: () => (voice ? voice.name : "the browser's default voice") };
 })();
 
 /* ---------------- confetti bricks ---------------- */
@@ -425,7 +459,7 @@ const starStr = n => [1, 2, 3].map(i => `<span class="${i <= n ? "" : "no"}">⭐
              onSolved(stage, S), reveal, mount(stage), autoSay }
    ===================================================================== */
 function MathGame(cfg) {
-  const TOTAL = 8, EXPRESS = 5, ENDLESS = 11, HEARTS = 3;
+  const TOTAL = cfg.total || 8, EXPRESS = cfg.express || Math.min(5, TOTAL), ENDLESS = 11, HEARTS = 3;
   const app = document.getElementById("app");
   let S = null;
 
@@ -604,8 +638,10 @@ function MathGame(cfg) {
       S.blanks[k] = b; b.classList.add("blank"); b.textContent = "";
       b.onclick = () => { if (!S.solved && !S.done.has(k)) { Sfx.tap(); select(k); } };
     });
-    if (P.choices) drawChoices(); else { drawPad(); select(firstOpen()); }
-    if (P.mount) P.mount(stage, S);
+    if (P.choices) drawChoices();
+    else if (P.custom) $("#input").innerHTML = "";
+    else { drawPad(); select(firstOpen()); }
+    if (P.mount) P.mount(stage, S, API);
     drawProgress();
     if (S.i > 0) window.scrollTo(0, 0);
     if (P.autoSay) Voice.say(P.say);
@@ -629,12 +665,15 @@ function MathGame(cfg) {
   }
 
   function drawPad() {
-    const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "del", "0", "go"];
+    const neg = !!S.P.neg;
+    const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "del", "0", neg ? "sign" : "go"];
     const cols = ["var(--red)", "var(--blue)", "var(--azure)", "var(--orange)", "var(--purple)", "var(--red)", "var(--blue)", "var(--azure)", "var(--orange)"];
     $("#input").innerHTML = '<div class="pad">' + keys.map((k, i) =>
       k === "del" ? '<button class="key del" data-k="del" aria-label="Delete">⌫</button>'
       : k === "go" ? '<button class="key go" data-k="go" aria-label="Check">✓</button>'
-      : `<button class="key" data-k="${k}" style="--c:${k === "0" ? "var(--purple)" : cols[i]}">${k}</button>`).join("") + "</div>";
+      : k === "sign" ? '<button class="key sign" data-k="sign" aria-label="Minus">+/−</button>'
+      : `<button class="key" data-k="${k}" style="--c:${k === "0" ? "var(--purple)" : cols[i]}">${k}</button>`).join("")
+      + (neg ? '<button class="key go wide" data-k="go" aria-label="Check">✓</button>' : "") + "</div>";
     $$(".key").forEach(b => b.onclick = () => { const k = b.dataset.k; if (k === "go") check(); else { Sfx.tap(); press(k); } });
   }
 
@@ -645,7 +684,8 @@ function MathGame(cfg) {
     S.stale[k] = false;
     const max = P.maxLen || Math.min(12, Math.max(3, String(P.answers[k]).length + 2));
     if (d === "del") b = b.slice(0, -1);
-    else if (b.length < max) b = (b === "0" ? "" : b) + d;
+    else if (d === "sign") b = b.startsWith("-") ? b.slice(1) : "-" + b;
+    else if (b.replace("-", "").length < max) b = (b === "0" ? "" : b === "-0" ? "-" : b) + d;
     S.buf[k] = b;
     const el = S.blanks[k];
     el.classList.remove("bad");
@@ -656,7 +696,7 @@ function MathGame(cfg) {
   function check() {
     if (!S || S.solved || S.locked || S.cur == null) return;
     const k = S.cur, b = S.stale[k] ? "" : S.buf[k];
-    if (!b) { const e = S.blanks[k]; e.classList.remove("bad"); void e.offsetWidth; e.classList.add("bad"); setTimeout(() => e.classList.remove("bad"), 400); return; }
+    if (!b || b === "-") { const e = S.blanks[k]; e.classList.remove("bad"); void e.offsetWidth; e.classList.add("bad"); setTimeout(() => e.classList.remove("bad"), 400); return; }
     const v = Number(b);
     if (v === S.P.answers[k]) correct(k); else wrong(k, v);
   }
@@ -715,7 +755,7 @@ function MathGame(cfg) {
 
   function drawChoices() {
     const P = S.P;
-    $("#input").innerHTML = '<div class="choices">' + P.choices.map((c, i) => `<button class="choice" data-i="${i}">${c.label}</button>`).join("") + "</div>";
+    $("#input").innerHTML = `<div class="choices ${P.choiceStyle || ""}">` + P.choices.map((c, i) => `<button class="choice" data-i="${i}">${c.label}</button>`).join("") + "</div>";
     $$(".choice").forEach(b => b.onclick = () => {
       if (S.solved || S.locked || b.disabled) return;
       const c = P.choices[+b.dataset.i];
@@ -731,6 +771,30 @@ function MathGame(cfg) {
     });
   }
 
+  // API handed to custom puzzles (board games, tap-grids) so they can drive the round themselves
+  const API = {
+    msg: (html, cls) => setMsg(html, cls),
+    hint: () => showHint(S && S.cur, true),
+    controls: html => { $("#input").innerHTML = html; },
+    stage: () => $("#stage"),
+    busy: () => !S || S.solved,
+    later: (fn, ms) => later(fn, ms),
+    mistake(n) {
+      if (!S || S.solved) return false;
+      S.mistakes += (n || 1);
+      if (S.endless && loseHeart()) { setMsg("Out of hearts!", "bad"); return true; }
+      return false;
+    },
+    finish(opts) {                        // {win:false} marks the puzzle as a miss
+      if (!S || S.solved) return;
+      opts = opts || {};
+      if (opts.win === false) S.gaveUp = true;
+      if (opts.reveal) S.P.reveal = opts.reveal;
+      if (opts.msg) S.P.keepMsg = opts.msg;
+      solved();
+    },
+  };
+
   function solved() {
     if (S.solved) return;
     S.solved = true;
@@ -739,9 +803,9 @@ function MathGame(cfg) {
     drawProgress();
     const stage = $("#stage");
     stage.classList.remove("enter"); void stage.offsetWidth; stage.classList.add("win");
-    Sfx.good(); burstAt(stage, res === "gold" ? 22 : 12);
-    const praise = res === "gold" ? pick(PRAISE) : res === "silver" ? "You got it! 👍" : "Now you know it! 💪";
-    setMsg(praise, "good");
+    if (res === "miss") Sfx.meh(); else { Sfx.good(); burstAt(stage, res === "gold" ? 22 : 12); }
+    const praise = S.P.keepMsg || (res === "gold" ? pick(PRAISE) : res === "silver" ? "You got it! 👍" : "Now you know it! 💪");
+    setMsg(praise, res === "miss" ? "bad" : "good");
     if (S.P.onSolved) S.P.onSolved(stage, S);
     if (S.P.reveal) $("#reveal").innerHTML = S.P.reveal;
     $("#tools").style.visibility = "hidden";
@@ -763,21 +827,21 @@ function MathGame(cfg) {
   function finish(express) {
     const level = S.level;
     const gold = S.results.filter(r => r === "gold").length;
-    const stars = express ? 3 : gold >= 7 ? 3 : gold === 6 ? 2 : gold === 5 ? 1 : 0;
+    const stars = express ? 3 : gold >= TOTAL - 1 ? 3 : gold === TOTAL - 2 ? 2 : gold === TOTAL - 3 ? 1 : 0;
     const wasOpen = level < 10 ? Store.levelOpen(cfg.id, level + 1) : Store.levelOpen(cfg.id, ENDLESS);
     const gamesBefore = CATALOG.map(g => Store.gameOpen(g));
     Store.setStars(cfg.id, level, stars);
     const gamesAfter = CATALOG.map(g => Store.gameOpen(g));
     syncToggles();
     let badges = "";
-    if (express) badges += `<span class="badge">⚡ EXPRESS PASS — 5 perfect in a row!</span>`;
+    if (express) badges += `<span class="badge">⚡ EXPRESS PASS — ${EXPRESS} perfect in a row!</span>`;
     if (stars > 0 && !wasOpen) badges += `<span class="badge new">🔓 ${level < 10 ? "Level " + (level + 1) + " unlocked!" : "Endless Challenge unlocked!"}</span>`;
     CATALOG.forEach((g, i) => { if (!gamesBefore[i] && gamesAfter[i] && !g.soon) badges += `<span class="badge new">🎉 NEW GAME: ${g.title}! Find it on the games page.</span>`; });
     const studs = S.results.map(r => `<span class="stud ${r}"></span>`).join("") + (express ? `<span class="stud bolt"></span>`.repeat(TOTAL - S.results.length) : "");
     const title = stars === 3 ? "Master Builder!" : stars > 0 ? "Level Complete!" : "Keep Practicing!";
     const text = stars > 0
-      ? `You solved <b>${gold}</b> of ${S.results.length} perfectly.`
-      : `You need 5 perfect puzzles to clear this level. You got <b>${gold}</b>. Try again — you're getting stronger!`;
+      ? `You ${cfg.scoreVerb || "solved"} <b>${gold}</b> of ${S.results.length} perfectly.`
+      : `You need ${TOTAL - 3} perfect ${cfg.scoreNoun || "puzzles"} to clear this level. You got <b>${gold}</b>. Try again — you're getting stronger!`;
     const o = overlay(`
       <div class="kicker">Level ${level} · ${cfg.levels[level - 1].name}</div>
       <h2>${title}</h2>
@@ -1037,7 +1101,7 @@ function MathGame(cfg) {
     return makePuzzle(rows, ["1,0", "1,1", "2,0"], op);
   }
 
-  window.PYRAMIDS = { build, solveOrder, chooseHidden, LEVELS, make };
+  window.GAME = window.PYRAMIDS = { build, solveOrder, chooseHidden, LEVELS, make };
 
   MathGame({
     id:"pyramids", title:"Brick Pyramids", icon:"🧱", color:"#1f6fd1",

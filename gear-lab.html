@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Math Lab</title>
+<title>Gear Lab · Math Lab</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Math Lab">
@@ -10,134 +10,274 @@
 <link rel="apple-touch-icon" href="data:image/png;base64,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">
 <link rel="icon" href="data:image/png;base64,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">
 <style>
-  :root{ --ink:#23314f; --sun:#ffcf3f; --pop:#ff5d5d; --green:#1f9d45; }
-  *{ margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  html,body{ min-height:100%; }
-  body{
-    font-family:ui-rounded,"SF Pro Rounded",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
-    color:var(--ink);
-    background:linear-gradient(165deg,#8fd3ff 0%, #c9f0ff 38%, #fff3c9 100%);
-    background-attachment:fixed;
-    padding:calc(env(safe-area-inset-top) + 18px) 16px calc(env(safe-area-inset-bottom) + 40px);
-    -webkit-text-size-adjust:100%;
-    -webkit-user-select:none; user-select:none; -webkit-touch-callout:none;
-  }
-  button{ font:inherit; color:inherit; cursor:pointer; }
-  .wrap{ max-width:920px; margin:0 auto; }
+:root{
+  --ink:#23314f; --muted:#5d6883; --sun:#ffcf3f; --pop:#ff5d5d;
+  --red:#d9281c; --blue:#1f6fd1; --green:#1f9d45; --yellow:#ffc919; --orange:#ff8a1f;
+  --purple:#8a4fd8; --azure:#23a9d0; --lime:#9bd12a; --pink:#ff5f9e; --grey:#8d96a8;
+  --card:#fff; --line:#dfe6f3;
+}
+*{ margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html,body{ min-height:100%; }
+body{
+  font-family:ui-rounded,"SF Pro Rounded",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(165deg,#8fd3ff 0%,#c9f0ff 38%,#fff3c9 100%);
+  background-attachment:fixed;
+  -webkit-text-size-adjust:100%;
+  -webkit-user-select:none; user-select:none;
+  touch-action:manipulation;
+}
+button{ font:inherit; color:inherit; cursor:pointer; touch-action:manipulation; }
+sup{ font-size:.58em; vertical-align:super; line-height:0; }
 
-  /* ---- Math picture tiles ---- */
-  .tiles{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; max-width:760px; margin:6px auto 0; }
-  .tile{ border:3px solid #fff; background:#fff; border-radius:18px; padding:8px 6px 7px; text-align:center;
-    box-shadow:0 6px 16px rgba(40,60,110,.14); transition:transform .12s; }
-  .tile:active{ transform:scale(.97); }
-  .tile svg{ display:block; width:100%; height:auto; aspect-ratio:4/3; }
-  .tile span{ display:block; font-weight:900; font-size:13px; margin-top:4px; color:#34405e; }
-  .tile small{ display:block; font-weight:700; font-size:11px; color:#7a849b; }
-  .tiles-note{ text-align:center; font-weight:700; font-size:12.5px; color:#3a4a6a; margin-top:8px; }
-  @media (max-width:540px){ .tiles{ gap:8px; } .tile{ border-radius:14px; padding:6px 4px; } .tile span{ font-size:11.5px; } .tile small{ display:none; } }
-  .explore svg{ display:block; width:min(320px,100%); height:auto; margin:6px auto 10px; }
-  .explore .q{ background:#f1ebff; border:2px solid #c9b5ff; border-radius:14px; padding:10px 12px; margin-top:12px; font-weight:800; color:#3b2a73; }
-  .explore .ans{ display:none; margin-top:8px; color:#12743a; font-weight:900; }
-  .explore .ans.show{ display:block; }
+/* ---------- top bar ---------- */
+.top{
+  position:sticky; top:0; z-index:20;
+  display:flex; align-items:center; gap:8px;
+  padding:calc(env(safe-area-inset-top) + 8px) 12px 8px;
+  background:rgba(255,255,255,.88); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  box-shadow:0 3px 14px rgba(40,60,110,.14);
+}
+.home{
+  flex:none; display:inline-flex; align-items:center; gap:6px;
+  background:var(--ink); color:#fff; text-decoration:none; font-weight:900; font-size:15px;
+  padding:9px 14px; border-radius:999px; box-shadow:0 4px 0 rgba(0,0,0,.18);
+}
+.home:active{ transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.18); }
+.gtitle{ flex:1; min-width:0; text-align:center; font-weight:900; font-size:clamp(16px,4.4vw,22px);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.pill{ flex:none; font-weight:900; font-size:15px; background:#fff4cc; border:2px solid #ffd966;
+  padding:6px 10px; border-radius:999px; }
+.iconbtn{ flex:none; width:40px; height:40px; border-radius:50%; border:2px solid var(--line);
+  background:#fff; font-size:19px; display:grid; place-items:center; }
+.iconbtn.off{ opacity:.6; }
+.vbtn{ flex:none; height:40px; border-radius:999px; border:2px solid #b8e0c4; background:#e6f7ec; color:#12743a;
+  font-weight:900; font-size:14px; padding:0 11px; white-space:nowrap; }
+.vbtn.off{ border-color:#e3c3c3; background:#fdeeee; color:#a03a3a; }
+.vbtn.off span{ text-decoration:line-through; text-decoration-thickness:2px; }
+.toast{ position:fixed; left:50%; top:calc(env(safe-area-inset-top) + 66px); transform:translateX(-50%); z-index:90; pointer-events:none;
+  background:#23314f; color:#fff; font-weight:800; font-size:15px; padding:10px 18px; border-radius:999px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25); max-width:calc(100vw - 32px); text-align:center; transition:opacity .4s; animation:fade .2s; }
+.toast.out{ opacity:0; }
+@media (max-width:420px){ .home span, .gtitle .gi{ display:none; } .top .pill{ display:none; } .iconbtn{ width:36px; height:36px; font-size:17px; } .vbtn{ height:36px; font-size:13px; padding:0 9px; } }
 
-  /* ---- Title bar ---- */
-  .titlebar{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin:4px 0 14px; }
-  .titlebar h1{ font-size:clamp(26px,7vw,40px); font-weight:900; letter-spacing:-.01em; text-align:center;
-    text-shadow:0 3px 0 #fff; }
-  .titlebar h1 .n{ display:inline-block; padding:0 .18em; border-radius:.2em; color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.2); }
-  .total{ font-weight:900; font-size:18px; background:#fff4cc; border:3px solid #ffd966; padding:6px 14px; border-radius:999px; }
-  .narr{ font-weight:900; font-size:15px; border:3px solid #b8e0c4; background:#e6f7ec; color:#12743a; padding:7px 14px; border-radius:999px; }
-  .narr.off{ border-color:#e3c3c3; background:#fdeeee; color:#a03a3a; }
-  .toast{ position:fixed; left:50%; top:calc(env(safe-area-inset-top) + 66px); transform:translateX(-50%); z-index:90; pointer-events:none;
-    background:#23314f; color:#fff; font-weight:800; font-size:15px; padding:10px 18px; border-radius:999px;
-    box-shadow:0 8px 24px rgba(0,0,0,.25); max-width:calc(100vw - 32px); text-align:center; transition:opacity .4s; }
-  .toast.out{ opacity:0; }
+.screen{ max-width:1040px; margin:0 auto; padding:14px 14px calc(env(safe-area-inset-bottom) + 30px); }
 
-  /* ---- Grid ---- */
-  .subhead{ text-align:center; font-weight:800; font-size:clamp(15px,4vw,20px); margin:12px 0 14px; color:#1b2a4a; }
-  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:760px; margin:0 auto; }
-  @media (max-width:540px){ .grid{ grid-template-columns:1fr; } }
-  .card .emoji svg{ display:block; }
+/* ---------- lego brick ---------- */
+.brick{
+  --c:var(--red);
+  position:relative; display:flex; align-items:center; justify-content:center;
+  background:var(--c); color:#fff; border-radius:7px; font-weight:900;
+  box-shadow:inset 0 -5px 0 rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.35), 0 3px 7px rgba(20,30,60,.18);
+  text-shadow:0 2px 0 rgba(0,0,0,.22);
+  font-variant-numeric:tabular-nums;
+}
+.brick::before{
+  content:""; position:absolute; left:8%; right:8%; top:-6px; height:7px;
+  background:radial-gradient(circle at 50% 75%, var(--c) 0 4.3px, transparent 4.8px) center top/17px 7px repeat-x;
+  filter:brightness(1.1);
+}
+.brick.lt{ color:var(--ink); text-shadow:none; }
+.c-red{--c:var(--red)} .c-blue{--c:var(--blue)} .c-green{--c:var(--green)} .c-yellow{--c:var(--yellow)}
+.c-orange{--c:var(--orange)} .c-purple{--c:var(--purple)} .c-azure{--c:var(--azure)} .c-lime{--c:var(--lime)}
+.c-pink{--c:var(--pink)} .c-grey{--c:var(--grey)}
 
-  .card{
-    position:relative; display:flex; flex-direction:column; text-decoration:none; color:inherit;
-    background:#fff; border-radius:22px; padding:18px 18px 16px;
-    box-shadow:0 8px 20px rgba(40,60,110,.16);
-    border:3px solid #fff; transition:transform .12s ease, box-shadow .12s ease;
-    min-height:188px;
-  }
-  .card.playable{ cursor:pointer; }
-  .card.playable:hover{ transform:translateY(-4px); box-shadow:0 16px 30px rgba(40,60,110,.24); }
-  .card.playable:active{ transform:translateY(-1px) scale(.99); }
-  .card .accent{ position:absolute; top:0; left:22px; right:22px; height:7px; border-radius:0 0 8px 8px; }
-  .card .emoji{ font-size:46px; line-height:1; margin:6px 0 8px; }
-  .card h2{ font-size:21px; font-weight:900; }
-  .card p{ font-size:13.5px; font-weight:600; color:#56607a; margin-top:6px; flex:1; }
-  .play{
-    margin-top:12px; align-self:flex-start; font-weight:900; font-size:16px; color:#fff;
-    padding:10px 20px; border-radius:999px; box-shadow:0 5px 0 rgba(0,0,0,.12);
-  }
-  .card.playable:active .play{ box-shadow:0 2px 0 rgba(0,0,0,.12); transform:translateY(2px); }
-  .prog{ margin-top:10px; font-size:13px; font-weight:800; color:#3a4766; }
-  .bar{ height:10px; border-radius:999px; background:#e7edf8; overflow:hidden; margin-bottom:5px; }
-  .bar i{ display:block; height:100%; border-radius:999px; }
-  .ribbon{ position:absolute; top:14px; right:14px; background:#ff5d5d; color:#fff; font-weight:900; font-size:13px;
-    padding:5px 10px; border-radius:999px; transform:rotate(6deg); animation:wiggle 1.2s ease-in-out infinite; }
-  @keyframes wiggle{ 50%{ transform:rotate(-6deg) scale(1.08); } }
+/* ---------- blanks (answer slots) ---------- */
+.blank{
+  cursor:pointer; background:#fff; color:var(--ink); text-shadow:none;
+  outline:3px dashed #a9b8d3; outline-offset:-3px;
+}
+.brick.blank{ --c:#eef2f9; box-shadow:0 3px 7px rgba(20,30,60,.12); }
+.blank:empty::after{ content:"?"; color:#b3bfd6; }
+.blank.sel{ outline:4px solid #ffb020; outline-offset:-4px; background:#fffbea; animation:glow 1.1s ease-in-out infinite; }
+.blank.bad{ outline:4px solid #e5484d; outline-offset:-4px; color:#e5484d; animation:shake .36s; }
+.blank.ok{ outline:none; background:var(--green); color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.2); animation:pop .35s; }
+.brick.blank.ok{ --c:var(--green); }
+.blank.given{ outline:none; background:var(--orange); color:#fff; }
+.brick.blank.given{ --c:var(--orange); }
+.blank.hl, .hl{ box-shadow:0 0 0 4px #ffb020, 0 3px 7px rgba(20,30,60,.18) !important; }
+@keyframes glow{ 50%{ box-shadow:0 0 0 6px rgba(255,176,32,.35); } }
+@keyframes shake{ 0%,100%{transform:translateX(0)} 20%{transform:translateX(-7px)} 40%{transform:translateX(7px)} 60%{transform:translateX(-5px)} 80%{transform:translateX(5px)} }
+@keyframes pop{ 0%{transform:scale(1)} 45%{transform:scale(1.18)} 100%{transform:scale(1)} }
 
-  .card.soon{ background:rgba(255,255,255,.55); border:3px dashed #b9c6e0; box-shadow:none; }
-  .card.soon .emoji{ filter:grayscale(1); opacity:.55; }
-  .card.soon h2{ color:#6b7691; }
-  .badge{ align-self:flex-start; margin-top:12px; font-weight:800; font-size:13px; color:#6b7691;
-    background:#e7edf8; padding:8px 14px; border-radius:999px; line-height:1.3; }
+/* ---------- level map ---------- */
+.maphead{
+  display:flex; align-items:center; gap:14px; background:#fff; border-radius:22px; padding:14px 16px;
+  box-shadow:0 8px 20px rgba(40,60,110,.14); border-top:8px solid var(--gc);
+}
+.maphead .bigicon{ flex:none; width:64px; height:64px; display:grid; place-items:center; font-size:48px; }
+.maphead .bigicon svg{ width:64px; height:64px; }
+.maphead h1{ font-size:clamp(22px,5.5vw,30px); font-weight:900; line-height:1.1; }
+.maphead p{ font-weight:700; color:var(--muted); font-size:14.5px; margin-top:4px; }
+.maphead .grow{ flex:1; min-width:0; }
+.levels{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px; margin:18px 0; }
+@media (max-width:420px){ .levels{ grid-template-columns:1fr 1fr; gap:12px; } }
+.lvl{
+  position:relative; border:none; text-align:left; border-radius:16px; padding:18px 12px 12px; min-height:112px;
+  background:var(--lc); color:#fff; display:flex; flex-direction:column; gap:3px;
+  box-shadow:inset 0 -6px 0 rgba(0,0,0,.2), 0 6px 14px rgba(20,30,60,.16);
+}
+.lvl::before{
+  content:""; position:absolute; left:14px; right:14px; top:-7px; height:9px;
+  background:radial-gradient(circle at 50% 80%, var(--lc) 0 6px, transparent 6.5px) left top/26px 9px repeat-x;
+  filter:brightness(1.12);
+}
+.lvl .ln{ font-size:30px; font-weight:900; line-height:1; text-shadow:0 2px 0 rgba(0,0,0,.2); }
+.lvl .lname{ font-size:14px; font-weight:800; line-height:1.15; }
+.lvl .lstars{ margin-top:auto; font-size:18px; letter-spacing:1px; }
+.lvl .lstars .no{ opacity:.35; filter:grayscale(1); }
+.lvl.locked{ background:#cfd7e6; color:#7b869c; box-shadow:inset 0 -6px 0 rgba(0,0,0,.08); }
+.lvl.locked::before{ background:radial-gradient(circle at 50% 80%, #cfd7e6 0 6px, transparent 6.5px) left top/26px 9px repeat-x; }
+.lvl.locked .ln::after{ content:" 🔒"; font-size:18px; }
+.lvl.next{ animation:bob 1.4s ease-in-out infinite; box-shadow:inset 0 -6px 0 rgba(0,0,0,.2), 0 0 0 4px #fff, 0 0 0 8px #ffb020; }
+.lvl:not(.locked):active{ transform:translateY(3px); }
+.lvl.endless{ grid-column:1/-1; min-height:80px; background:linear-gradient(120deg,#23314f,#5b3fd0); }
+.lvl.endless::before{ display:none; }
+.lvl.endless.locked{ background:#cfd7e6; }
+@keyframes bob{ 50%{ transform:translateY(-4px); } }
+.howto{ background:rgba(255,255,255,.75); border-radius:18px; padding:14px 16px; font-weight:700; color:#3a4766; font-size:15px; line-height:1.45; }
+.howto b{ color:var(--ink); }
 
-  footer{ text-align:center; margin-top:26px; font-size:12.5px; font-weight:700; color:#3a4a6a; opacity:.85; }
-  #gear{ display:inline-block; font-size:18px; padding:6px 10px; margin-right:4px; border-radius:999px; background:rgba(255,255,255,.6);
-    vertical-align:middle; -webkit-touch-callout:none; touch-action:none; }
-  #gear.hold{ background:#ffd966; transition:background 1s; }
+/* ---------- play ---------- */
+.play{ display:grid; gap:12px; grid-template-columns:minmax(0,1fr); }
+@media (min-width:800px) and (orientation:landscape){
+  .play{ grid-template-columns:minmax(0,1fr) 330px; align-items:start; }
+  .play .phead{ grid-column:1/-1; }
+  .side{ position:sticky; top:74px; }
+}
+.phead{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
+.ptitle{ font-weight:900; font-size:17px; background:#fff; padding:7px 14px; border-radius:999px; box-shadow:0 3px 10px rgba(40,60,110,.12); }
+.studs{ display:flex; gap:6px; }
+.stud{ width:24px; height:24px; border-radius:50%; background:#fff; border:3px solid #c7d2e6; }
+.stud.now{ border-color:#ffb020; animation:glow 1.1s infinite; }
+.stud.gold{ background:radial-gradient(circle at 35% 30%,#fff6b0,#ffc300 60%,#e0a100); border-color:#d69a00; }
+.stud.silver{ background:radial-gradient(circle at 35% 30%,#fff,#c3cad6 60%,#9aa3b3); border-color:#8e97a8; }
+.stud.miss{ background:#ffd9c2; border-color:#ff8a1f; }
+.stud.bolt{ background:#ffe16b; border-color:#ffb020; }
+.hearts{ font-size:22px; letter-spacing:2px; }
+.score{ font-weight:900; font-size:17px; background:#23314f; color:#fff; padding:6px 14px; border-radius:999px; }
+.stagewrap{ background:#fff; border-radius:22px; padding:16px 14px; box-shadow:0 8px 20px rgba(40,60,110,.14); min-width:0; }
+.stage{ min-height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+.stage.enter{ animation:slidein .35s ease-out; }
+@keyframes slidein{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+.prompt{ text-align:center; font-weight:800; font-size:clamp(15px,3.9vw,19px); margin-top:12px; line-height:1.35; color:#34405e; }
+.msg{ text-align:center; font-weight:800; font-size:16px; min-height:24px; margin-top:8px; line-height:1.35; }
+.msg.good{ color:var(--green); font-size:20px; }
+.msg.bad{ color:#d4383d; }
+.msg .hint{ display:block; margin-top:6px; background:#fff6d6; color:#5a4400; border-radius:12px; padding:8px 12px; font-weight:800; }
+.reveal{ margin-top:10px; }
+.reveal:empty{ display:none; }
+.side{ background:#fff; border-radius:22px; padding:12px; box-shadow:0 8px 20px rgba(40,60,110,.14); }
+.tools{ display:flex; gap:8px; margin-bottom:10px; }
+.tool{ flex:1; border:2px solid var(--line); background:#f6f8fc; border-radius:12px; padding:9px 6px; font-weight:900; font-size:15px; }
+.tool:active{ background:#e9eef8; }
+.pad{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px 9px; padding-top:6px; }
+.key{
+  --c:var(--blue);
+  position:relative; border:none; border-radius:10px; height:clamp(50px,7.2vh,64px);
+  background:var(--c); color:#fff; font-size:28px; font-weight:900;
+  box-shadow:inset 0 -5px 0 rgba(0,0,0,.22), inset 0 2px 0 rgba(255,255,255,.3);
+  text-shadow:0 2px 0 rgba(0,0,0,.2);
+}
+.key::before{
+  content:""; position:absolute; left:18%; right:18%; top:-5px; height:6px;
+  background:radial-gradient(circle at 50% 80%, var(--c) 0 4px, transparent 4.5px) center top/16px 6px repeat-x;
+  filter:brightness(1.12);
+}
+.key:active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,.22); }
+.key.del{ --c:#8d96a8; font-size:24px; }
+.key.go{ --c:var(--green); }
+.key.sign{ --c:#5d6883; font-size:22px; }
+.key.go.wide{ grid-column:span 3; height:clamp(44px,5.5vh,54px); }
+.choices{ display:grid; gap:10px; }
+.choices.pics{ grid-template-columns:1fr 1fr; gap:12px; }
+.choices.pics .choice{ padding:10px; display:flex; align-items:center; justify-content:center; min-height:96px; }
+@media (max-width:600px){ .choices.pics .choice{ min-height:80px; padding:8px; } }
+.choice{
+  border:none; border-radius:14px; padding:14px 12px; font-size:clamp(17px,4.4vw,21px); font-weight:900;
+  background:#eef3ff; color:var(--ink); box-shadow:inset 0 -4px 0 rgba(0,0,0,.1); text-align:center; line-height:1.25;
+}
+.choice:active{ transform:translateY(2px); }
+.choice.ok{ background:var(--green); color:#fff; animation:pop .35s; }
+.choice.no{ background:#ffe1e1; color:#c04040; text-decoration:line-through; animation:shake .36s; }
+.nextbtn.take{ background:var(--blue); animation:none; }
+.nextbtn.take.dim{ background:#aeb8c9; }
+.nextbtn.both{ background:var(--purple); margin-top:10px; font-size:19px; animation:none; }
+.nextbtn{
+  width:100%; border:none; border-radius:16px; padding:18px; font-size:26px; font-weight:900; color:#fff;
+  background:var(--green); box-shadow:inset 0 -6px 0 rgba(0,0,0,.2); animation:bob 1.2s ease-in-out infinite;
+}
+.stage.win{ animation:pop .45s; }
 
-  /* ---- overlays ---- */
-  .overlay{ position:fixed; inset:0; z-index:50; background:rgba(20,30,55,.55); display:grid; place-items:center; padding:16px; }
-  .ocard{ width:min(560px,100%); max-height:calc(100vh - 32px); overflow:auto; background:#fff; border-radius:24px; padding:22px 20px;
-    box-shadow:0 20px 50px rgba(0,0,0,.3); animation:popin .3s ease-out; }
-  @keyframes popin{ from{ transform:scale(.85); opacity:0; } }
-  .ocard h2{ font-size:26px; font-weight:900; margin-bottom:8px; }
-  .ocard h3{ font-size:16px; font-weight:900; margin:16px 0 6px; }
-  .ocard p, .ocard li{ font-size:14.5px; font-weight:600; color:#3f4a66; line-height:1.45; }
-  .ocard ol{ padding-left:22px; }
-  .ocard li b{ color:var(--ink); }
-  .celebrate{ text-align:center; }
-  .celebrate .big{ font-size:64px; }
-  .row{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-bottom:1px solid #eef1f7; font-weight:800; font-size:15px; }
-  .sw{ width:54px; height:32px; border-radius:999px; border:none; background:#cfd7e6; position:relative; flex:none; }
-  .sw::after{ content:""; position:absolute; top:3px; left:3px; width:26px; height:26px; border-radius:50%; background:#fff; transition:left .15s; box-shadow:0 1px 3px rgba(0,0,0,.2); }
-  .sw.on{ background:var(--green); }
-  .sw.on::after{ left:25px; }
-  .btn{ border:none; border-radius:999px; padding:12px 22px; font-size:17px; font-weight:900; color:#fff; background:var(--green); box-shadow:inset 0 -4px 0 rgba(0,0,0,.2); }
-  .btn.alt{ background:#e9eef8; color:var(--ink); }
-  .btn.warn{ background:#e5484d; }
-  .mini{ border:2px solid #e3c3c3; background:#fdeeee; color:#a03a3a; font-weight:900; font-size:12px; border-radius:8px; padding:3px 7px; }
-  .btns{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:16px; }
-  table{ width:100%; border-collapse:collapse; font-size:14px; font-weight:700; }
-  td,th{ text-align:left; padding:5px 4px; border-bottom:1px solid #eef1f7; }
-  th{ color:#6b7691; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
-  .bit{ position:fixed; z-index:80; width:16px; height:10px; border-radius:3px; pointer-events:none; }
+/* ---------- overlay (intro / results) ---------- */
+.overlay{ position:fixed; inset:0; z-index:50; background:rgba(20,30,55,.55); display:grid; place-items:center; padding:16px; animation:fade .2s; }
+@keyframes fade{ from{opacity:0} }
+.ocard{
+  width:min(520px,100%); max-height:calc(100vh - 32px); overflow:auto; background:#fff; border-radius:26px; padding:22px 20px 18px;
+  text-align:center; box-shadow:0 20px 50px rgba(0,0,0,.3); border-top:10px solid var(--gc,#ffb020); animation:popin .3s ease-out;
+}
+@keyframes popin{ from{ transform:scale(.85); opacity:0; } }
+.ocard .kicker{ font-weight:900; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; font-size:13px; }
+.ocard h2{ font-size:clamp(26px,7vw,34px); font-weight:900; margin:4px 0 8px; line-height:1.1; }
+.ocard p{ font-weight:700; color:#3f4a66; font-size:16.5px; line-height:1.45; }
+.ocard .demo{ margin:14px auto 4px; }
+.obtns{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:18px; }
+.btn{
+  border:none; border-radius:999px; padding:13px 22px; font-size:19px; font-weight:900; color:#fff; background:var(--green);
+  box-shadow:inset 0 -5px 0 rgba(0,0,0,.2);
+}
+.btn.alt{ background:#e9eef8; color:var(--ink); }
+.btn.blue{ background:var(--blue); }
+.btn:active{ transform:translateY(2px); }
+.bigstars{ font-size:54px; letter-spacing:6px; margin:6px 0; }
+.bigstars span{ display:inline-block; animation:starin .5s both; }
+.bigstars span.no{ filter:grayscale(1); opacity:.25; }
+@keyframes starin{ from{ transform:scale(0) rotate(-90deg); } }
+.badge{ display:inline-block; font-weight:900; font-size:15px; padding:6px 14px; border-radius:999px; background:#fff1b8; color:#6b4f00; margin:4px; }
+.badge.new{ background:#dff7e6; color:#12743a; }
+.resstuds{ display:flex; gap:6px; justify-content:center; margin:10px 0; }
+
+/* confetti bricks */
+.bit{ position:fixed; z-index:80; width:16px; height:10px; border-radius:3px; pointer-events:none; }
+
+
+/* ---------- phones: keep the keypad in reach ---------- */
+@media (max-width:600px){
+  .screen.playing{ padding-bottom:0; }
+  .play{ gap:10px; }
+  .phead{ flex-wrap:nowrap; gap:8px; }
+  .ptitle{ font-size:14.5px; padding:6px 11px; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .studs{ gap:4px; flex:none; }
+  .stud{ width:18px; height:18px; border-width:2.5px; }
+  .stagewrap{ padding:12px 10px; }
+  .stage{ min-height:140px; }
+  .prompt{ margin-top:8px; }
+  .side{ position:sticky; bottom:0; z-index:10; margin:0 -14px; border-radius:20px 20px 0 0;
+    padding:8px 12px calc(env(safe-area-inset-bottom) + 10px); box-shadow:0 -6px 22px rgba(40,60,110,.18); }
+  .tools{ margin-bottom:6px; }
+  .tool{ padding:6px; font-size:14px; }
+  .pad{ gap:9px 8px; }
+  .key{ height:clamp(44px, 6.4vh, 58px); font-size:25px; }
+  .nextbtn{ padding:14px; font-size:23px; }
+  #prog{ flex:none; white-space:nowrap; }
+  .hearts{ font-size:16px; letter-spacing:0; }
+  .score{ font-size:14px; padding:5px 10px; }
+}
+
+/* ---------- Gear Lab ---------- */
+.gl{ width:100%; display:flex; flex-direction:column; align-items:center; gap:10px; }
+.train{ width:100%; height:auto; max-height:34vh; }
+.train.spinning .gg{ animation:gspin var(--dur) linear infinite; }
+.train .gg{ transform-origin:0 0; }
+@keyframes gspin{ to{ transform:rotate(calc(360deg * var(--dir))); } }
+.glq{ font-weight:900; font-size:clamp(16px,4.2vw,21px); text-align:center; line-height:1.45; }
+.glq .small{ display:block; font-size:.72em; font-weight:800; color:var(--muted); margin-top:3px; }
+.worm{ font-weight:900; font-size:20px; background:#eef3fb; border-radius:14px; padding:12px 18px; }
+
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="titlebar">
-    <h1><span class="n" style="background:#1f6fd1">Math</span> <span class="n" style="background:#d9281c">Lab</span></h1>
-    <div class="total" id="total">⭐ 0</div>
-    <button class="narr" id="narr">🗣️ Narration: On</button>
-  </div>
-  <div class="tiles" id="tiles"></div>
-  <div class="tiles-note">Tap a picture to explore 🔍</div>
-  <div class="subhead" id="subhead">Pick a game to play! 🎮</div>
-  <div id="grid" class="grid"></div>
-  <footer><span id="gear" title="Grown-ups: press and hold">⚙︎</span> Math Lab 🧱 • master a game to unlock the next one</footer>
-</div>
-
+<div id="app"></div>
 <script>
 "use strict";
 /* =====================================================================
@@ -747,306 +887,212 @@ function MathGame(cfg) {
 
 </script>
 <script>
-// ====== How each game looks on this page (the unlock order lives in CATALOG) ======
-const LOOK = {
-  pyramids:{ color:"#1f6fd1",
-    desc:"Every brick is the two bricks under it added together. Can you finish the pyramid?",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><g stroke="rgba(0,0,0,.18)" stroke-width="1.5"><rect x="22" y="8" width="20" height="13" rx="3" fill="#ffc919"/><rect x="11" y="25" width="20" height="13" rx="3" fill="#1f9d45"/><rect x="33" y="25" width="20" height="13" rx="3" fill="#1f9d45"/><rect x="1" y="42" width="20" height="13" rx="3" fill="#1f6fd1"/><rect x="22" y="42" width="20" height="13" rx="3" fill="#1f6fd1"/><rect x="43" y="42" width="20" height="13" rx="3" fill="#1f6fd1"/></g><g font-family="system-ui" font-weight="900" font-size="9" text-anchor="middle" fill="#fff"><text x="32" y="18" fill="#23314f">12</text><text x="21" y="35">5</text><text x="43" y="35">7</text><text x="11" y="52">2</text><text x="32" y="52">3</text><text x="53" y="52">4</text></g></svg>` },
-  patterns:{ color:"#8a4fd8",
-    desc:"The machine follows a secret rule. Crack the code and find the missing numbers!",
-    svg:`<svg viewBox="-50 -50 100 100" width="52" height="52"><path d="${gear(10, 46, 36)}" fill="#8a4fd8"/><circle r="26" fill="#fff"/><text y="8" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="22" fill="#23314f">+3</text></svg>` },
-  googol:{ color:"#28195e",
-    desc:"Zeros, powers of ten, a googol and a googolplex. Zoom your rocket past the galaxy!",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="1" y="1" width="62" height="62" rx="14" fill="#141a3d"/><circle cx="12" cy="14" r="1.6" fill="#fff"/><circle cx="50" cy="10" r="1.3" fill="#fff"/><circle cx="54" cy="44" r="1.5" fill="#fff"/><circle cx="8" cy="46" r="1.2" fill="#fff"/><text x="31" y="41" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="21" fill="#ffe16b">10</text><text x="46" y="29" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="12" fill="#7fe3ff">100</text></svg>` },
-  brickfit:{ color:"#23a9d0",
-    desc:"Count the bricks you can't see, turn pieces in your head, mirror shapes and fold flat pieces into boxes.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><polygon points="32,6 54,17 32,28 10,17" fill="#ffc919"/><polygon points="10,17 32,28 32,50 10,39" fill="#1f6fd1"/><polygon points="54,17 32,28 32,50 54,39" fill="#1f9d45"/><ellipse cx="32" cy="12" rx="6" ry="3" fill="#ffe08a"/></svg>` },
-  takeaway:{ color:"#1f6fd1",
-    desc:"Take bricks turn by turn and beat the robot. Every level hides a secret rule that wins every time.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="6" y="40" width="52" height="12" rx="3" fill="#1f6fd1"/><rect x="6" y="26" width="34" height="12" rx="3" fill="#1f9d45"/><rect x="6" y="12" width="20" height="12" rx="3" fill="#ffc919"/><circle cx="48" cy="20" r="11" fill="#8d96a8"/><circle cx="44" cy="18" r="2.4" fill="#fff"/><circle cx="52" cy="18" r="2.4" fill="#fff"/><rect x="43" y="25" width="10" height="2.6" rx="1.3" fill="#fff"/></svg>` },
-  mystery:{ color:"#8a4fd8",
-    desc:"Feed the machine numbers, watch what comes out, work out its secret rule — then prove it.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="10" y="16" width="44" height="34" rx="7" fill="#8a4fd8"/><circle cx="24" cy="30" r="5" fill="#ffe16b"/><circle cx="40" cy="30" r="5" fill="#7fe3ff"/><rect x="20" y="40" width="24" height="5" rx="2.5" fill="#fff"/><path d="M4 33 h6 M54 33 h6" stroke="#23314f" stroke-width="4" stroke-linecap="round"/></svg>` },
-  target:{ color:"#d9281c",
-    desc:"Hit the target number using + − × ÷. Long puzzles, many answers, undo costs nothing.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><circle cx="32" cy="32" r="26" fill="#d9281c"/><circle cx="32" cy="32" r="17" fill="#fff"/><circle cx="32" cy="32" r="9" fill="#d9281c"/><circle cx="32" cy="32" r="3.4" fill="#fff"/></svg>` },
-  ways:{ color:"#ffc919",
-    desc:"How many ways can it happen? Count huge numbers of things without listing them all.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="6" y="8" width="22" height="16" rx="4" fill="#d9281c"/><rect x="36" y="8" width="22" height="16" rx="4" fill="#1f6fd1"/><rect x="6" y="30" width="22" height="16" rx="4" fill="#1f9d45"/><rect x="36" y="30" width="22" height="16" rx="4" fill="#ffc919"/><text x="32" y="60" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="15" fill="#23314f">2×2=4</text></svg>` },
-  balance:{ color:"#1f6fd1",
-    desc:"Keep the scale balanced and find the mystery number. This is where algebra starts.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="30" y="14" width="4" height="38" rx="2" fill="#8d96a8"/><rect x="10" y="18" width="44" height="4" rx="2" fill="#5d6883"/><polygon points="32,44 20,56 44,56" fill="#5d6883"/><rect x="4" y="22" width="20" height="10" rx="3" fill="#1f6fd1"/><rect x="40" y="22" width="20" height="10" rx="3" fill="#ffc919"/></svg>` },
-  primes:{ color:"#1f9d45",
-    desc:"Multiples, factors, factor trees and the 2,000-year-old sieve that hunts down primes.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="8" y="26" width="48" height="30" rx="5" fill="#8d96a8"/><rect x="14" y="10" width="10" height="18" rx="2" fill="#5d6883"/><circle cx="19" cy="8" r="5" fill="#dfe6f3"/><text x="32" y="48" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="18" fill="#fff">2·3·5</text></svg>` },
-  binary:{ color:"#ffc919",
-    desc:"Counting with lights on and off — the way computers do it, and the trick behind Take-Away.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="2" y="20" width="60" height="24" rx="6" fill="#23314f"/><circle cx="14" cy="32" r="7" fill="#ffe16b"/><circle cx="32" cy="32" r="7" fill="#3c4a68"/><circle cx="50" cy="32" r="7" fill="#ffe16b"/></svg>` },
-  belowzero:{ color:"#23a9d0",
-    desc:"What happens when you count past zero: −1, −2, −3 and the cold side of the number line.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="26" y="6" width="12" height="40" rx="6" fill="#dfe6f3"/><rect x="28" y="20" width="8" height="26" rx="4" fill="#1f6fd1"/><circle cx="32" cy="50" r="10" fill="#1f6fd1"/><text x="52" y="22" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="15" fill="#23314f">−5</text></svg>` },
-  fractions:{ color:"#ff8a1f",
-    desc:"Halves, thirds, quarters and eighths — as bricks you can see and count.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><rect x="4" y="18" width="56" height="28" rx="6" fill="#eef3fb" stroke="#c7d2e6" stroke-width="2"/><rect x="6" y="20" width="26" height="24" rx="4" fill="#1f6fd1"/><line x1="32" y1="18" x2="32" y2="46" stroke="#c7d2e6" stroke-width="2"/><line x1="46" y1="18" x2="46" y2="46" stroke="#c7d2e6" stroke-width="2"/><line x1="18" y1="18" x2="18" y2="46" stroke="#c7d2e6" stroke-width="2"/></svg>` },
-  gears:{ color:"#8d96a8",
-    desc:"Technic gear trains: teeth, turns, direction and why a crane is slow but strong.",
-    svg:`<svg viewBox="0 0 64 64" width="52" height="52"><g transform="translate(22 34)"><path d="${gear(12, 20, 16)}" fill="#8d96a8"/><circle r="5" fill="#fff"/></g><g transform="translate(46 20)"><path d="${gear(8, 14, 10.5)}" fill="#ff8a1f"/><circle r="4" fill="#fff"/></g></svg>` },
-};
-// Roadmap shown in the grown-ups panel
-const ROADMAP = [
-  ["Brick Pyramids", "adding, subtracting, reasoning backwards, early algebra"],
-  ["Pattern Machine", "sequences and rules: doubling, squares, Fibonacci, primes"],
-  ["Googol Zoom", "place value, powers of ten, exponents, googol & googolplex"],
-  ["Brick Fit", "spatial reasoning: hidden bricks, rotation, mirrors, cube nets"],
-  ["Take-Away", "Nim: find a winning strategy and prove it by never losing"],
-  ["Gear Lab", "Technic gear ratios, direction, compound trains, speed vs strength"],
-  ["Mystery Machine", "functions: probe a machine, form a rule, test it, predict"],
-  ["Target Builder", "open-ended search with + − × ÷ (Countdown style)"],
-  ["How Many Ways", "combinatorics: product rule, paths, handshakes, arrangements"],
-  ["Balance Scale", "equations and two unknowns — algebra with boxes and stars"],
-  ["Prime Factory", "multiples, factors, factor trees, primes, the sieve"],
-  ["Binary Lights", "base 2 — and the secret behind Take-Away's three-pile levels"],
-  ["Below Zero", "negative numbers on the number line"],
-  ["Fraction Bricks", "halves, thirds, quarters, eighths; comparing and adding"],
-];
+/* =====================================================================
+   Game 6 — Gear Lab: Technic gear ratios, direction, and gear trains.
+   ===================================================================== */
+(() => {
+  const TEETH = [8, 16, 24, 40];
+  const GCOL = { 8:"#8d96a8", 16:"#d9281c", 24:"#ffc919", 40:"#1f6fd1", 12:"#1f9d45", 20:"#ff8a1f" };
+  const gcd = (a, b) => b ? gcd(b, a % b) : a;
+  const why = t => `<div class="why">${t}</div>`;
+  const SLOT = `<span class="slot" data-blank="0"></span>`;
 
-function gear(teeth, ro, ri) {
-  let d = ""; const N = teeth * 4;
-  for (let k = 0; k < N; k++) { const a = k / N * Math.PI * 2, r = (k % 4 < 2) ? ro : ri; d += (k ? "L" : "M") + (Math.cos(a) * r).toFixed(1) + " " + (Math.sin(a) * r).toFixed(1); }
-  return d + "Z";
-}
-
-// ---- math pictures (drawn in code, no image files) ----
-function fibSVG() {
-  const sizes = [1, 1, 2, 3, 5, 8, 13], fills = ["#ffe08a", "#ffd0a8", "#bfe3ff", "#c8f0cf", "#e2d4ff", "#ffc9d9", "#fff1b8"];
-  let x0 = 0, y0 = 0, x1 = 1, y1 = 1, sq = [], arcs = [];
-  const rot = (x, y) => [y, -x];                     // turn the picture sideways so it's wide
-  sizes.forEach((s, k) => {
-    const d = k === 0 ? 3 : (k - 1) % 4;               // 0 right, 1 down, 2 left, 3 up
-    let x, y;
-    if (k === 0) { x = 0; y = 0; }
-    else if (d === 0) { x = x1; y = y0; x1 += s; }
-    else if (d === 1) { x = x0; y = y1; y1 += s; }
-    else if (d === 2) { x = x0 - s; y = y0; x0 -= s; }
-    else { x = x0; y = y0 - s; y0 -= s; }
-    const P = { 0:[[x, y], [x + s, y + s]], 1:[[x + s, y], [x, y + s]], 2:[[x + s, y + s], [x, y]], 3:[[x, y + s], [x + s, y]] }[d];
-    const a = rot(...P[0]), b = rot(...P[1]);
-    sq.push(`<rect x="${y}" y="${-x - s}" width="${s}" height="${s}" fill="${fills[k]}" stroke="#23314f" stroke-width=".12"/>` +
-      (s >= 2 ? `<text x="${y + s / 2}" y="${-x - s / 2 + s * .12}" font-size="${s * .34}" text-anchor="middle" font-family="system-ui" font-weight="900" fill="#23314f" opacity=".55">${s}</text>` : ""));
-    arcs.push((k ? "" : `M${a[0]} ${a[1]}`) + `A${s} ${s} 0 0 1 ${b[0]} ${b[1]}`);
-  });
-  // bounding box after rotation: x' in [y0, y1], y' in [-x1, -x0]
-  return `<svg viewBox="${y0 - .5} ${-x1 - .5} ${y1 - y0 + 1} ${x1 - x0 + 1}">${sq.join("")}<path d="${arcs.join("")}" fill="none" stroke="#d9281c" stroke-width=".38" stroke-linecap="round"/></svg>`;
-}
-function sunflowerSVG() {
-  let h = `<svg viewBox="-56 -42 112 84"><rect x="-56" y="-42" width="112" height="84" fill="#fff8e1"/>`;
-  const golden = Math.PI * (3 - Math.sqrt(5));
-  for (let n = 1; n <= 260; n++) {
-    const r = 2.1 * Math.sqrt(n), t = n * golden;
-    const col = n % 2 ? "#8a5a1c" : "#b7791f";
-    h += `<circle cx="${(r * Math.cos(t)).toFixed(2)}" cy="${(r * Math.sin(t)).toFixed(2)}" r="${(0.9 + n / 260).toFixed(2)}" fill="${col}"/>`;
+  function gearPath(teeth, ro, ri) {
+    let d = ""; const N = teeth * 4;
+    for (let k = 0; k < N; k++) { const a = k / N * Math.PI * 2, r = (k % 4 < 2) ? ro : ri;
+      d += (k ? "L" : "M") + (Math.cos(a) * r).toFixed(1) + " " + (Math.sin(a) * r).toFixed(1); }
+    return d + "Z";
   }
-  for (let p = 0; p < 21; p++) {
-    const t = p / 21 * 2 * Math.PI, R = 36.5;
-    h += `<ellipse cx="${(R * Math.cos(t)).toFixed(1)}" cy="${(R * Math.sin(t)).toFixed(1)}" rx="5.5" ry="2.6" fill="#ffc919" transform="rotate(${(t * 180 / Math.PI).toFixed(1)} ${(R * Math.cos(t)).toFixed(1)} ${(R * Math.sin(t)).toFixed(1)})" opacity=".9"/>`;
-  }
-  return h + "</svg>";
-}
-function pascalSVG(rows) {
-  rows = rows || 16;
-  let h = `<svg viewBox="-1 -1 ${rows * 2 + 1} ${rows * 1.5 + 1}">`, row = [1];
-  for (let r = 0; r < rows; r++) {
-    row.forEach((v, c) => {
-      const x = rows - r + c * 2 - .5, y = r * 1.5;
-      h += `<circle cx="${x}" cy="${y + .5}" r=".82" fill="${v % 2 ? "#1f6fd1" : "#dfe6f3"}"/>`;
-      if (r < 5) h += `<text x="${x}" y="${y + .82}" font-size=".95" text-anchor="middle" font-family="system-ui" font-weight="900" fill="#fff">${v}</text>`;
+  // list: [{t, axle:"new"|"same", label, mark}] — "same" puts the gear on the previous axle
+  function trainSVG(list, opts) {
+    opts = opts || {};
+    const m = 1.05, R = g => Math.max(11, (typeof g.t === "number" ? g.t : 26) * m);
+    let x = 0, out = [], minx = 1e9, maxx = -1e9, maxr = 0;
+    list.forEach((g, i) => {
+      if (i === 0) x = R(g);
+      else if (g.axle === "same") x = out[i - 1].x;
+      else x = out[i - 1].x + R(list[i - 1]) + R(g);
+      out.push({ ...g, x, r:R(g) });
+      minx = Math.min(minx, x - R(g)); maxx = Math.max(maxx, x + R(g)); maxr = Math.max(maxr, R(g));
     });
-    const next = [1];
-    for (let c = 1; c < row.length; c++) next.push(row[c - 1] + row[c]);
-    next.push(1); row = next;
+    const pad = 30, VW = maxx - minx + pad * 2, U = VW / 330;        // keep text the same size on screen
+    const LF = Math.max(9, 15 * U), TF = f => Math.max(7, f * U * 1.15);
+    let svg = "", labels = "";
+    out.forEach((g, i) => {
+      const col = GCOL[g.t] || "#8d96a8", dur = (opts.base || 1.8) * (typeof g.t === "number" ? g.t : 24) / 8;
+      const dir = g.dir != null ? g.dir : (i % 2 ? -1 : 1);
+      const fs = Math.max(TF(11), Math.min(g.r * .6, TF(17)));
+      svg += `<g transform="translate(${g.x} 0)">
+        <g class="gg" style="--dur:${dur}s;--dir:${dir}">
+          <path d="${gearPath(typeof g.t === "number" ? g.t : 24, g.r * 1.14, g.r * 0.85)}" fill="${col}" stroke="${col}" stroke-width="1"/>
+        </g>
+        <circle r="${Math.max(fs * .95, g.r * .45)}" fill="#fff" opacity=".93"/>
+        <text y="${fs * .36}" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="${fs}" fill="#23314f">${g.t}</text>
+      </g>`;
+      const ly = -maxr - 10 - (i % 2) * LF * 1.15;
+      if (g.label) labels += `<text x="${g.x}" y="${ly}" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="${LF}" fill="${g.label === "?" ? "#d9281c" : "#5d6883"}">${g.label}</text>`;
+      if (g.axle === "same") labels += `<text x="${g.x}" y="${maxr + LF * 1.5}" text-anchor="middle" font-family="system-ui" font-weight="800" font-size="${LF * .85}" fill="#8a4fd8">same axle ↕</text>`;
+    });
+    return `<svg class="train" viewBox="${minx - pad} ${-maxr - LF * 3.4} ${VW} ${maxr * 2 + LF * 5.6}">${svg}${labels}</svg>`;
   }
-  return h + "</svg>";
-}
-function sierpinskiSVG() {
-  const tris = [];
-  (function go(ax, ay, bx, by, cx, cy, d) {
-    if (d === 0) { tris.push(`${ax.toFixed(2)},${ay.toFixed(2)} ${bx.toFixed(2)},${by.toFixed(2)} ${cx.toFixed(2)},${cy.toFixed(2)}`); return; }
-    const abx = (ax + bx) / 2, aby = (ay + by) / 2, bcx = (bx + cx) / 2, bcy = (by + cy) / 2, cax = (cx + ax) / 2, cay = (cy + ay) / 2;
-    go(ax, ay, abx, aby, cax, cay, d - 1); go(abx, aby, bx, by, bcx, bcy, d - 1); go(cax, cay, bcx, bcy, cx, cy, d - 1);
-  })(50, 2, 4, 72, 96, 72, 5);
-  const cols = ["#d9281c", "#ff8a1f", "#8a4fd8"];
-  return `<svg viewBox="0 0 100 75"><polygon points="50,2 4,72 96,72" fill="#f4f6fb"/>` +
-    tris.map((p, i) => `<polygon points="${p}" fill="${cols[Math.floor(i / 81)]}"/>`).join("") + `</svg>`;
-}
-const PICS = [
-  { title:"Fibonacci spiral", sub:"1, 1, 2, 3, 5, 8…", svg:fibSVG,
-    text:"Each number is the two before it added together: 1, 1, 2, 3, 5, 8, 13… Squares with those sizes fit together perfectly, and a spiral grows right through them.",
-    q:"What comes after 13?", a:"21 (because 8 + 13 = 21)" },
-  { title:"Sunflower", sub:"nature counts too", svg:sunflowerSVG,
-    text:"Sunflower seeds grow in spirals. Count the spirals turning one way, then the other way, and you usually get two Fibonacci numbers that sit next to each other, like 34 and 55.",
-    q:"Which Fibonacci number comes after 55?", a:"89 (because 34 + 55 = 89)" },
-  { title:"Pascal's triangle", sub:"a secret pattern", svg:pascalSVG,
-    text:"Each number is the two numbers above it added together — a Brick Pyramid upside down! Paint the odd numbers blue and a picture made of triangles appears.",
-    q:"The row after 1, 4, 6, 4, 1 is…?", a:"1, 5, 10, 10, 5, 1" },
-  { title:"Sierpiński triangle", sub:"triangles forever", svg:sierpinskiSVG,
-    text:"Take a triangle and cut out the middle. Now do the same to each of the 3 triangles that are left, and again, and again… forever. It's the same shape the odd numbers make in Pascal's triangle!",
-    q:"1 triangle becomes 3, then 9. How many after 5 steps?", a:"243 (3 × 3 × 3 × 3 × 3)" },
-];
-(function () {
-  const box = document.getElementById("tiles");
-  PICS.forEach((p, i) => {
-    const b = document.createElement("button");
-    b.className = "tile";
-    b.innerHTML = p.svg() + `<span>${p.title}</span><small>${p.sub}</small>`;
-    b.onclick = () => {
-      Sfx.tap();
-      const o = overlay(`<div class="explore"><h2>${p.title}</h2>${p.svg()}<p>${p.text}</p>
-        <div class="q">🤔 ${p.q}<div class="ans" id="ans">✅ ${p.a}</div></div>
-        <div class="btns"><button class="btn alt" id="readX">🔊 Read</button><button class="btn" id="showAns">Show answer</button><button class="btn alt" id="closeX">Close</button></div></div>`);
-      Voice.say(p.text + " " + p.q);
-      o.querySelector("#readX").onclick = () => Voice.say(p.text + " " + p.q, true);
-      o.querySelector("#showAns").onclick = () => { o.querySelector("#ans").classList.add("show"); Sfx.good(); };
-      o.querySelector("#closeX").onclick = () => { Voice.stop(); o.remove(); };
-    };
-    box.appendChild(b);
-  });
-})();
+  const turnWord = n => `${n} turn${n === 1 ? "" : "s"}`;
 
-// ---- narration switch ----
-(function () {
-  const b = document.getElementById("narr");
-  const sync = () => { const on = !!Store.get("voice"); b.textContent = "🗣️ Narration: " + (on ? "On" : "Off"); b.classList.toggle("off", !on); };
-  b.onclick = () => { Store.set("voice", !Store.get("voice")); if (!Store.get("voice")) Voice.stop(); sync(); toast(Store.get("voice") ? "Narration on" : "Narration off — nothing will be read aloud unless you tap 🔊"); };
-  sync();
-  window.syncNarr = sync;
-})();
-
-// ---- cards ----
-function render() {
-  const grid = document.getElementById("grid");
-  const seen = Store.get("seen") || {};
-  grid.innerHTML = "";
-  document.getElementById("total").textContent = "⭐ " + Store.allStars();
-  let teaserShown = false;
-  for (const g of CATALOG) {
-    const look = LOOK[g.id], open = Store.gameOpen(g);
-    if (open && !g.soon) {
-      const hi = Store.highest(g.id), st = Store.totalStars(g.id), best = Store.game(g.id).best || 0;
-      const a = document.createElement("a");
-      a.className = "card playable"; a.href = g.file;
-      a.innerHTML =
-        '<span class="accent" style="background:' + look.color + '"></span>' +
-        (seen[g.id] ? "" : '<span class="ribbon">NEW!</span>') +
-        '<div class="emoji">' + look.svg + '</div>' +
-        '<h2>' + g.title + '</h2>' +
-        '<p>' + look.desc + '</p>' +
-        '<div class="prog"><div class="bar"><i style="width:' + (hi * 10) + '%;background:' + look.color + '"></i></div>' +
-        (hi >= 10 ? "🏆 All 10 levels cleared" + (best ? " · endless best " + best : "") : hi ? "Level " + hi + " of 10 cleared" : "Start at Level 1") +
-        ' · ⭐ ' + st + '/30</div>' +
-        '<span class="play" style="background:' + look.color + '">PLAY ▶</span>';
-      a.addEventListener("click", () => { const s = Store.get("seen") || {}; s[g.id] = true; Store.set("seen", s); });
-      grid.appendChild(a);
-    } else if (!teaserShown) {
-      teaserShown = true;
-      const d = document.createElement("div");
-      d.className = "card soon";
-      let line;
-      if (open) line = "🛠️ You're ready for this one! It's still being built — coming soon.";
-      else {
-        const need = CATALOG.find(x => x.id === g.needs.game);
-        const have = Math.min(g.needs.level, Store.highest(g.needs.game));
-        line = "🔒 Clear Level " + g.needs.level + " of " + need.title + " to unlock (" + have + "/" + g.needs.level + ")";
-      }
-      d.innerHTML =
-        '<span class="accent" style="background:#c3cee2"></span>' +
-        '<div class="emoji">' + look.svg + '</div>' +
-        '<h2>' + (open ? g.title : "Next: " + g.title) + '</h2>' +
-        '<p>' + look.desc + '</p>' +
-        '<span class="badge">' + line + '</span>';
-      grid.appendChild(d);
-    }
-  }
-}
-
-// ---- "new game unlocked" celebration (once per game) ----
-function celebrate() {
-  const cel = Store.get("celebrated") || {};
-  const fresh = CATALOG.filter(g => g.needs && !g.soon && Store.gameOpen(g) && !cel[g.id] && !Store.get("unlockAll"));
-  if (!fresh.length) return;
-  fresh.forEach(g => cel[g.id] = true);
-  Store.set("celebrated", cel);
-  const g = fresh[fresh.length - 1];
-  const o = overlay(`<div class="celebrate"><div class="big">🎉</div><h2>New game unlocked!</h2>
-    <div style="margin:10px auto">${LOOK[g.id].svg}</div><p style="font-size:20px"><b>${g.title}</b></p>
-    <p>${LOOK[g.id].desc}</p>
-    <div class="btns"><button class="btn" id="celOk">Awesome! ▶</button></div></div>`);
-  setTimeout(() => burst(innerWidth / 2, innerHeight / 3, 50), 200);
-  Sfx.win();
-  Voice.say("New game unlocked! " + g.title + "!");
-  o.querySelector("#celOk").onclick = () => o.remove();
-}
-
-function overlay(html) {
-  const o = document.createElement("div");
-  o.className = "overlay";
-  o.innerHTML = '<div class="ocard">' + html + '</div>';
-  o.addEventListener("click", e => { if (e.target === o) { Voice.stop(); o.remove(); } });
-  document.body.appendChild(o);
-  return o;
-}
-
-// ---- grown-ups panel: press and hold the gear ----
-(function () {
-  const gearEl = document.getElementById("gear");
-  let t = null;
-  const start = e => { e.preventDefault(); gearEl.classList.add("hold"); t = setTimeout(() => { gearEl.classList.remove("hold"); parentPanel(); }, 1200); };
-  const stop = () => { gearEl.classList.remove("hold"); clearTimeout(t); };
-  gearEl.addEventListener("pointerdown", start);
-  ["pointerup", "pointerleave", "pointercancel"].forEach(ev => gearEl.addEventListener(ev, stop));
-  gearEl.addEventListener("contextmenu", e => e.preventDefault());
-})();
-
-function parentPanel() {
-  const sw = (id, on, label) => `<div class="row"><span>${label}</span><button class="sw ${on ? "on" : ""}" id="${id}"></button></div>`;
-  const rows = CATALOG.filter(g => !g.soon).map(g => `<tr><td>${g.title}</td><td>${Store.gameOpen(g) ? "open" : "locked"}</td><td>${Store.highest(g.id)}/10</td><td>${Store.totalStars(g.id)}/30</td><td>${Store.game(g.id).best || 0}</td><td><button class="mini" data-reset="${g.id}">↺</button></td></tr>`).join("");
-  const o = overlay(`
-    <h2>⚙︎ Grown-ups</h2>
-    ${sw("swAll", Store.get("unlockAll"), "Open all games and levels")}
-    ${sw("swSnd", Store.get("sound"), "Sound effects")}
-    ${sw("swVoice", Store.get("voice"), "Narration (read things aloud automatically)")}
-    <div class="row"><span>Voice: <b id="vname">…</b></span><button class="btn alt" id="vtest" style="padding:8px 16px;font-size:15px">🔊 Test</button></div>
-    <h3>Progress</h3>
-    <table><tr><th>Game</th><th>Status</th><th>Levels</th><th>Stars</th><th>Endless</th><th>Reset</th></tr>${rows}</table>
-    <p style="font-size:13px;color:#6b7691">↺ resets one game. The red button below erases everything.</p>
-    <h3>How it works</h3>
-    <p>Each level is 8 puzzles (5 in Target Builder). If the first 5 are all perfect, that’s an ⚡ Express Pass (3 stars, level cleared). Otherwise 5+ perfect puzzles out of 8 clears the level (5 = ⭐, 6 = ⭐⭐, 7–8 = ⭐⭐⭐). A puzzle counts as perfect only with no wrong tries and no hint. Three wrong tries reveal the answer. Clearing Level 5 of a game unlocks the next game; clearing Level 10 opens its Endless mode.</p>
-    <h3>The 14 games, in unlock order</h3>
-    <ol>${ROADMAP.map(r => `<li><b>${r[0]}</b> — ${r[1]}</li>`).join("")}</ol>
-    <div class="btns"><button class="btn warn" id="reset">Reset all progress</button><button class="btn alt" id="close">Close</button></div>`);
-  const flip = (id, key, after) => { const b = o.querySelector("#" + id); b.onclick = () => { Store.set(key, !Store.get(key)); b.classList.toggle("on", !!Store.get(key)); if (after) after(); }; };
-  flip("swAll", "unlockAll", render);
-  flip("swSnd", "sound");
-  flip("swVoice", "voice", () => window.syncNarr && window.syncNarr());
-  o.querySelector("#vname").textContent = Voice.name();
-  o.querySelector("#vtest").onclick = () => { Voice.say("Hello! I am the Math Lab voice. Let's do some math!", true); o.querySelector("#vname").textContent = Voice.name(); };
-  o.querySelectorAll("[data-reset]").forEach(b2 => b2.onclick = () => {
-    const id = b2.dataset.reset;
-    if (b2.dataset.armed) { const st = Store.load(); delete st.games[id]; const c = Store.get("celebrated") || {}; delete c[id]; Store.set("celebrated", c); Store.save(); o.remove(); parentPanel(); render(); return; }
-    b2.dataset.armed = "1"; b2.textContent = "sure?";
-    setTimeout(() => { delete b2.dataset.armed; b2.textContent = "↺"; }, 4000);
-  });
-  const rb = o.querySelector("#reset");
-  rb.onclick = () => {
-    if (rb.dataset.armed) { Store.reset(); Store.set("celebrated", {}); o.remove(); render(); return; }
-    rb.dataset.armed = "1"; rb.textContent = "Tap again to erase everything";
-    setTimeout(() => { delete rb.dataset.armed; rb.textContent = "Reset all progress"; }, 4000);
+  /* ---------- puzzle makers ---------- */
+  const Q = {
+    pair(i, B, backwards) {
+      let a, b, n;
+      do { a = pick(TEETH); b = pick(TEETH); } while (a === b);
+      const g = gcd(a, b);
+      n = (b / g) * rnd(1, 2 + B);                        // turns of gear A, chosen so the answer is whole
+      const ans = n * a / b;
+      const [drv, out] = backwards ? [b, a] : [a, b], [dt, at] = backwards ? [ans, n] : [n, ans];
+      const list = [{ t:drv, label:`turns ${dt}× ⟲` }, { t:out, label:"?" }];
+      return { html:`<div class="gl">${trainSVG(list)}<div class="glq">The <b>${drv}-tooth</b> gear turns <b>${dt}</b> ${dt === 1 ? "time" : "times"}. How many times does the <b>${out}-tooth</b> gear turn? ${SLOT}</div></div>`,
+        say:`The ${drv} tooth gear turns ${dt} times. How many times does the ${out} tooth gear turn?`,
+        answers:[backwards ? n : ans], key:`pr${drv}.${out}.${dt}`,
+        hint:() => `Count the teeth that go past: <b>${drv} × ${dt} = ${drv * dt}</b> teeth. Now share them out ${out} at a time.`,
+        reveal:why(`${drv} × ${dt} = ${drv * dt} teeth → ${drv * dt} ÷ ${out} = <b>${turnWord(backwards ? n : ans)}</b>`),
+        spin:true };
+    },
+    direction(i, B) {
+      const n = rnd(2, 3 + (i > 4 ? 1 : 0));
+      const list = Array.from({ length:n }, (_, k) => ({ t:pick(TEETH), label:k === 0 ? "turns ⟲" : k === n - 1 ? "?" : "" }));
+      const same = (n - 1) % 2 === 0;
+      return { html:`<div class="gl">${trainSVG(list)}<div class="glq">The first gear turns <b>this way ⟲</b>. Which way does the <b>last</b> gear turn?</div></div>`,
+        say:"The first gear turns this way. Which way does the last gear turn?",
+        choices:shuffle([{ label:"⟲ The same way", ok:same }, { label:"⟳ The other way", ok:!same }]),
+        key:`dir${list.map(g => g.t).join(".")}`,
+        hint:() => "Two gears that touch always turn <b>opposite</b> ways. Count the gears along the line.",
+        reveal:why(`${n} gears: each one flips the direction, so gear 1, 3, 5… turn the same way. ${same ? "Same way!" : "Opposite way!"}`) };
+    },
+    idler(i, B) {
+      const a = pick(TEETH), mid = pick(TEETH.filter(t => t !== a)), n = rnd(2, 5 + B);
+      const list = [{ t:a, label:`turns ${n}× ⟲` }, { t:mid, label:"idler" }, { t:a, label:"?" }];
+      return { html:`<div class="gl">${trainSVG(list)}<div class="glq">The two end gears both have <b>${a}</b> teeth. The first turns <b>${n}</b> times. How many times does the last one turn? ${SLOT}</div></div>`,
+        say:`The two end gears are the same size. The first turns ${n} times. How many times does the last one turn?`,
+        answers:[n], key:`id${a}.${mid}.${n}`,
+        hint:() => "Work it out in two steps: first gear → middle gear, then middle gear → last gear. What happens to the middle one's effect?",
+        reveal:why(`The middle gear is an <b>idler</b>: it changes the direction but <b>not</b> the speed. Same size in, same speed out: <b>${n}</b>.`),
+        spin:true };
+    },
+    fastest(i, B) {
+      const opts = [[40, 8], [8, 40], [24, 24], [16, 8]];
+      const fast = Math.random() < .5;
+      const score = p => p[0] / p[1];
+      const best = opts.reduce((a, b) => (fast ? score(b) > score(a) : score(b) < score(a)) ? b : a);
+      return { html:`<div class="gl"><div class="glq">Which pair makes the second gear spin the <b>${fast ? "fastest" : "slowest"}</b>?<br><small class="small">The first gear in each pair is the one being turned.</small></div></div>`,
+        say:`Which pair makes the second gear spin the ${fast ? "fastest" : "slowest"}?`,
+        choices:shuffle(opts.map(p => ({ label:`${p[0]} → ${p[1]}`, ok:p === best }))),
+        key:`fs${fast}${best.join(".")}`,
+        hint:() => "A <b>big</b> gear driving a <b>small</b> one makes the small one spin fast. Small driving big goes slowly.",
+        reveal:why(`${best[0]} → ${best[1]}: every turn of the ${best[0]}-tooth gear is ${best[0] > best[1] ? `${best[0] / best[1]} turns` : `${best[1] / best[0]} of a turn`} of the ${best[1]}-tooth gear.`) };
+    },
+    train(i, B) {
+      const pairs = [[8, 24], [8, 40], [8, 16], [16, 40]];
+      const p1 = pick(pairs), p2 = pick(pairs);
+      const down = (p1[1] / p1[0]) * (p2[1] / p2[0]);
+      const out = rnd(1, 2 + B), motor = out * down;
+      if (motor > 400) return Q.train(i, B);
+      const list = [{ t:p1[0], label:"motor ⟲" }, { t:p1[1] }, { t:p2[0], axle:"same" }, { t:p2[1], label:"?" }];
+      return { html:`<div class="gl">${trainSVG(list)}<div class="glq">The motor turns <b>${motor}</b> times. How many times does the last gear turn? ${SLOT}</div></div>`,
+        say:`The motor turns ${motor} times. How many times does the last gear turn?`,
+        answers:[out], key:`tr${p1.join("")}${p2.join("")}${motor}`,
+        hint:() => `Two steps: ${p1[0]} → ${p1[1]} slows it down <b>${p1[1] / p1[0]}</b> times, and ${p2[0]} → ${p2[1]} slows it <b>${p2[1] / p2[0]}</b> more times.`,
+        reveal:why(`${p1[1] / p1[0]} × ${p2[1] / p2[0]} = <b>${down}</b> times slower. ${motor} ÷ ${down} = <b>${out}</b>`),
+        spin:true };
+    },
+    missing(i, B) {
+      const known = pick(TEETH), other = pick(TEETH.filter(t => t !== known));
+      const g = gcd(known, other), n1 = (other / g) * rnd(1, 2), n2 = n1 * known / other;
+      const list = [{ t:known, label:`turns ${n1}× ⟲` }, { t:"?", label:`turns ${n2}×` }];
+      return { html:`<div class="gl">${trainSVG(list)}<div class="glq">The <b>${known}-tooth</b> gear turns <b>${n1}</b> ${n1 === 1 ? "time" : "times"} and the other gear turns <b>${n2}</b> ${n2 === 1 ? "time" : "times"}. How many <b>teeth</b> does the other gear have? ${SLOT}</div></div>`,
+        say:`The ${known} tooth gear turns ${n1} times, and the other gear turns ${n2} times. How many teeth does the other gear have?`,
+        answers:[other], key:`ms${known}.${other}.${n1}`,
+        hint:() => `The same teeth go past both gears: ${known} × ${n1} = <b>${known * n1}</b> teeth, shared over ${n2} turns.`,
+        reveal:why(`${known * n1} teeth ÷ ${n2} turns = <b>${other} teeth</b>`) };
+    },
+    worm(i, B) {
+      const t = pick([8, 16, 24, 40]), turns = rnd(1, 3 + B), worm = t * turns;
+      const back = i % 2 === 1;
+      return { html:`<div class="gl"><div class="worm">🌀 <b>worm gear</b> ➜ <b>${t}-tooth</b> gear</div><div class="glq">${back
+          ? `The <b>${t}-tooth</b> gear turns <b>${turns}</b> ${turns === 1 ? "time" : "times"}. How many times did the worm turn? ${SLOT}`
+          : `The worm turns <b>${worm}</b> times. How many times does the <b>${t}-tooth</b> gear turn? ${SLOT}`}</div></div>`,
+        say:back ? `The ${t} tooth gear turns ${turns} times. How many times did the worm turn?` : `The worm turns ${worm} times. How many times does the ${t} tooth gear turn?`,
+        answers:[back ? worm : turns], key:`wr${t}.${turns}.${back}`,
+        hint:() => `A worm gear pushes the wheel along by <b>one tooth</b> per turn. The wheel has ${t} teeth, so ${t} worm turns = 1 wheel turn.`,
+        reveal:why(`${t} worm turns per wheel turn → ${back ? `${turns} × ${t} = <b>${worm}</b> worm turns` : `${worm} ÷ ${t} = <b>${turns}</b> wheel turns`}`) };
+    },
+    strength(i, B) {
+      const slow = pick([2, 3, 4, 5]), force = rnd(2, 5 + B);
+      const askForce = Math.random() < .5;
+      return { html:`<div class="gl">${trainSVG([{ t:8, label:"motor ⟲" }, { t:8 * slow, label:"wheel" }])}
+          <div class="glq">Gearing down makes things <b>slower</b> but <b>stronger</b> by the same amount.<br>${askForce
+            ? `The motor pushes with <b>${force}</b>. How hard does the big gear push? ${SLOT}`
+            : `This train is <b>${slow}</b> times stronger. How many times <b>slower</b> is it? ${SLOT}`}</div></div>`,
+        say:askForce ? `Gearing down makes things slower but stronger. The motor pushes with ${force}. How hard does the big gear push?` : `This gear train is ${slow} times stronger. How many times slower is it?`,
+        answers:[askForce ? force * slow : slow], key:`st${slow}.${force}.${askForce}`,
+        hint:() => `8 → ${8 * slow} teeth means <b>${slow}</b> times slower, and ${slow} times stronger.`,
+        reveal:why(askForce ? `${force} × ${slow} = <b>${force * slow}</b>` : `<b>${slow}</b> times slower — slower and stronger always match.`) };
+    },
+    design(i, B) {
+      const want = pick([2, 3, 5]), have = pick([8, 16]);
+      const right = have * want;
+      const wrongs = [have, have * 2, have * 3, have * 5, 8, 40].filter(t => t !== right);
+      return { html:`<div class="gl"><div class="glq">You have a <b>${have}-tooth</b> gear on the wheel. You want the wheel to turn <b>${want} times</b> for every <b>1 turn</b> of the motor gear. How many teeth should the <b>motor</b> gear have? ${SLOT}</div></div>`,
+        say:`You have a ${have} tooth gear on the wheel. You want the wheel to turn ${want} times for every turn of the motor gear. How many teeth should the motor gear have?`,
+        answers:[right], key:`dz${have}.${want}`,
+        hint:() => `To spin ${want} times faster, the driving gear needs to be <b>${want} times bigger</b>.`,
+        reveal:why(`${have} × ${want} = <b>${right} teeth</b> on the motor gear`) };
+    },
   };
-  o.querySelector("#close").onclick = () => o.remove();
-}
 
-render();
-celebrate();
-window.addEventListener("pageshow", e => { if (e.persisted) { Store.load(); render(); celebrate(); } });
+  const LEVELS = [
+    { name:"Two Gears", color:"#8d96a8", pool:() => ["pairA"], blurb:"Two gears meshed together. If one turns, how many times does the other turn? Count the <b>teeth</b>!",
+      say:"Level 1. Two gears. If one gear turns, how many times does the other one turn? Count the teeth!" },
+    { name:"Backwards", color:"#d9281c", pool:i => i < 3 ? ["pairB", "pairA"] : ["pairB"], blurb:"Now you know the second gear's turns — work out the first gear's.",
+      say:"Level 2. Backwards. Now you know the second gear's turns. Work out the first gear's turns." },
+    { name:"Which Way?", color:"#ffc919", pool:() => ["direction"], blurb:"Gears that touch turn <b>opposite</b> ways. So which way does the last one go?",
+      say:"Level 3. Which way? Gears that touch turn opposite ways. So which way does the last one go?" },
+    { name:"The Idler", color:"#1f6fd1", pool:i => i < 5 ? ["idler"] : ["idler", "direction"], blurb:"A gear stuck in the middle of two others. Does it change the speed?",
+      say:"Level 4. The idler. A gear stuck in the middle. Does it change the speed?" },
+    { name:"Fast or Slow", color:"#1f9d45", pool:i => i < 4 ? ["fastest"] : ["fastest", "pairA"], blurb:"Big driving small = fast. Small driving big = slow and strong.",
+      say:"Level 5. Fast or slow. Big driving small is fast. Small driving big is slow and strong." },
+    { name:"Gear Train", color:"#ff8a1f", pool:() => ["train"], blurb:"Two stages, one after the other. The slowing-down <b>multiplies</b>!",
+      say:"Level 6. Gear train. Two stages, one after the other. The slowing down multiplies!" },
+    { name:"Missing Gear", color:"#8a4fd8", pool:() => ["missing"], blurb:"You know how many turns each gear made. How many teeth is the mystery gear?",
+      say:"Level 7. Missing gear. You know the turns. How many teeth is the mystery gear?" },
+    { name:"Worm Gear", color:"#23a9d0", pool:() => ["worm"], blurb:"A worm gear moves the wheel just <b>one tooth</b> per turn — the biggest gear-down of all.",
+      say:"Level 8. Worm gear. A worm gear moves the wheel one tooth per turn. The biggest gear down of all!" },
+    { name:"Speed & Strength", color:"#d9281c", pool:() => ["strength"], blurb:"Whatever you lose in speed, you gain in strength. That's why Technic cranes are slow.",
+      say:"Level 9. Speed and strength. Whatever you lose in speed, you gain in strength." },
+    { name:"Build a Train", color:"#1f6fd1", pool:i => i % 2 ? ["design"] : ["train", "missing"], blurb:"Now design the gears yourself to get the speed you want.",
+      say:"Level 10. Build a train. Design the gears yourself to get the speed you want." },
+  ];
+
+  function make(level, i, boost) {
+    const L = LEVELS[Math.min(9, level - 1)], name = pick(L.pool(i));
+    if (name === "pairA") return Q.pair(i, boost, false);
+    if (name === "pairB") return Q.pair(i, boost, true);
+    return Q[name](i, boost);
+  }
+
+  window.GEARS = window.GAME = { LEVELS, make, Q, trainSVG };
+
+  MathGame({
+    id:"gears", title:"Gear Lab", icon:"⚙️", color:"#8d96a8",
+    iconSvg:`<svg viewBox="0 0 64 64"><g transform="translate(23 36)"><path d="${gearPath(12, 20, 16)}" fill="#8d96a8"/><circle r="6" fill="#fff"/></g><g transform="translate(46 19)"><path d="${gearPath(8, 14, 11)}" fill="#d9281c"/><circle r="4" fill="#fff"/></g></svg>`,
+    tagline:"Teeth, turns and gear trains — the maths inside every Technic model.",
+    howTo:`<b>How to play:</b> gears push each other tooth by tooth, so a <b>big</b> gear turning a <b>small</b> one makes it spin faster, and a small gear turning a big one makes it slower — but stronger. Work out the turns, the teeth and the direction. Watch the gears spin at the right speeds once you've answered!`,
+    howToSay:"Gears push each other tooth by tooth. A big gear turning a small one makes it spin faster. A small gear turning a big one makes it slower, but stronger. Work out the turns, the teeth and the direction!",
+    levels:LEVELS, make,
+    endlessName:"Endless Gears",
+  });
+
+  // spin the gears at the right relative speeds once the answer is in
+  const oldMake = make;
+  window.GEARS.make = (l, i, b) => { const p = oldMake(l, i, b); if (p.spin) { const os = p.onSolved; p.onSolved = (stage, S) => { const t = $(".train", stage); if (t) t.classList.add("spinning"); if (os) os(stage, S); }; } return p; };
+})();
+
 </script>
 </body>
 </html>
